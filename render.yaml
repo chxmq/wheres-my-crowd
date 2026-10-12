@@ -1,0 +1,16 @@
+# Render Blueprint: free web service. Set QLOO_API_KEY and GEMINI_API_KEY as secrets in the dashboard.
+services:
+  - type: web
+    name: wheres-my-crowd
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22.20.0"
+      - key: QLOO_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
