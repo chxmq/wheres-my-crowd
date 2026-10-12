@@ -14,3 +14,7 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: QLOO_BASE_URL
+        value: https://hackathon.api.qloo.com
+      - key: QLOO_TRUSTED_BASE_URL
+        value: https://hackathon.api.qloo.com
