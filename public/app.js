@@ -152,4 +152,13 @@ $("#plan-form").addEventListener("submit", async (e) => {
   }
 });
 
+document.querySelector(".examples")?.addEventListener("click", (e) => {
+  const b = e.target.closest(".ex");
+  if (!b) return;
+  $("#act").value = b.dataset.act;
+  $("#region").value = b.dataset.region;
+  document.querySelector(`input[name="kind"][value="${b.dataset.kind}"]`).checked = true;
+  $("#plan-form").requestSubmit();
+});
+
 init();

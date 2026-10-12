@@ -39,6 +39,9 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 }
 .field input:focus-visible, .field select:focus-visible { border-color: var(--blue); }
 .hint { font-size: .85rem; color: var(--ink-soft); margin-top: .3rem; }
+.examples { margin-top: .5rem; font-size: .85rem; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
+.ex { border: 1px solid var(--rule); background: var(--paper); border-radius: 999px; padding: .2rem .6rem; font-size: .82rem; cursor: pointer; min-height: 32px; }
+.ex:hover { border-color: var(--blue); color: var(--blue); }
 .seg { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem; }
 .seg label { cursor: pointer; }
 .seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
