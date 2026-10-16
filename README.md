@@ -60,5 +60,8 @@ Qloo's harness needs a long-running Node process, so serverless hosts are not su
 - Smaller acts may not be in Qloo yet. Use an act you sound like as the reference.
 - Affinity scores from separate calls are not comparable (Qloo's own guidance), so the poster compares cities only within one `where_popular` call.
 
+## Data credits
+City names, coordinates and populations in `data/cities.json` come from [GeoNames](https://www.geonames.org) (cities15000), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Taste data comes from the Qloo API at request time and is not stored in this repository.
+
 ## License
 MIT. Built for the Qloo Agentic Hackathon (2026).
