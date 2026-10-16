@@ -1,0 +1,12 @@
+{
+  "_source": "docs.qloo.com/reference/taste-analysis, 'Tag Insights Response Example' (first four tags)",
+  "success": true,
+  "results": {
+    "tags": [
+      { "tag_id": "urn:tag:keyword:media:brady_bunch", "name": "Brady Bunch", "types": ["urn:entity:tv_show", "urn:entity:writer", "urn:entity:director", "urn:entity:tv_episode", "urn:entity:actor", "urn:entity:movie"], "subtype": "urn:tag:keyword:media", "tag_value": "urn:tag:keyword:media:brady_bunch", "query": {} },
+      { "tag_id": "urn:tag:keyword:media:mining_accident", "name": "Mining Accident", "types": ["urn:entity:tv_show", "urn:entity:writer", "urn:entity:director", "urn:entity:tv_episode", "urn:entity:actor", "urn:entity:movie"], "subtype": "urn:tag:keyword:media", "tag_value": "urn:tag:keyword:media:mining_accident", "query": {} },
+      { "tag_id": "urn:tag:keyword:media:complex", "name": "Complex", "types": ["urn:entity:tv_show", "urn:entity:writer", "urn:entity:director", "urn:entity:tv_episode", "urn:entity:actor", "urn:entity:movie"], "subtype": "urn:tag:keyword:media", "tag_value": "urn:tag:keyword:media:complex", "query": {} },
+      { "tag_id": "urn:tag:keyword:media:hostile_environment", "name": "Hostile Environment", "types": ["urn:entity:tv_show", "urn:entity:writer", "urn:entity:director", "urn:entity:tv_episode", "urn:entity:actor", "urn:entity:movie"], "subtype": "urn:tag:keyword:media", "tag_value": "urn:tag:keyword:media:hostile_environment", "query": {} }
+    ]
+  }
+}

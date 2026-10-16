@@ -1,0 +1,11 @@
+{
+  "_source": "docs.qloo.com/reference/demographics-use-case, 'Demographics Response Example'",
+  "success": true,
+  "results": {
+    "demographics": [
+      { "entity_id": "urn:tag:genre:media:action", "query": { "age": { "24_and_younger": 0, "25_to_29": 0.43, "30_to_34": 0.23, "35_to_44": -0.02, "45_to_54": -0.28, "55_and_older": -0.17 }, "gender": { "male": 0.08, "female": -0.08 } } },
+      { "entity_id": "B8BEE72B-B321-481F-B81A-A44881D094D6", "query": { "age": { "24_and_younger": -0.09, "25_to_29": 0.36, "30_to_34": 0.7000000000000001, "35_to_44": 0.17, "45_to_54": -0.53, "55_and_older": -0.32 }, "gender": { "male": 0.16, "female": -0.16 } } }
+    ]
+  },
+  "duration": 77
+}

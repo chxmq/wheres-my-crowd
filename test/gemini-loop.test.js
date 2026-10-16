@@ -3,43 +3,52 @@ import assert from "node:assert/strict";
 process.env.MOCK = "1";
 process.env.GEMINI_API_KEY = "test-key";
 
-// Scripted model: two Qloo calls, then a plan that includes one invented city.
-const script = [
-  { functionCall: { name: "qloo_where_popular", args: { entity: "Mitski", entity_type: "artist", within: "United States", limit: 5 } } },
-  { functionCall: { name: "qloo_recommend", args: { target_type: "artist", signals: ["Mitski"], limit: 3 } } },
-  { functionCall: { name: "submit_tour_plan", args: { headline: "h", cities: [{ city: "__FIRST__", why: "w", evidence: [1] }, { city: "Gotham", why: "w", evidence: [] }], openers: [{ name: "Sample act A", why: "w", evidence: [2] }], partners: [], timing: "t", caveats: [] } } },
-];
+// Scripted model: after steps 1-2 (done by the server), one Qloo call, then a plan
+// with one invented city. A second scenario simulates the free tier running out.
+let scenario = "script";
 const seenBodies = [];
 globalThis.fetch = async (url, opts) => {
-  const body = JSON.parse(opts.body);
-  seenBodies.push(body);
   assert.match(String(url), /generativelanguage\.googleapis\.com/);
   assert.equal(opts.headers["x-goog-api-key"], "test-key");
-  const part = structuredClone(script[seenBodies.length - 1]);
-  if (part.functionCall.name === "submit_tour_plan") {
-    // use the first city the tool actually returned, so grounding keeps it
-    const fr = body.contents.flatMap((c) => c.parts || []).find((p) => p.functionResponse?.name === "qloo_where_popular");
-    part.functionCall.args.cities[0].city = fr.functionResponse.response.results[0].name;
+  const body = JSON.parse(opts.body);
+  seenBodies.push(body);
+  if (scenario === "quota") return { ok: false, status: 429, json: async () => ({ error: { status: "RESOURCE_EXHAUSTED", message: "quota" } }) };
+  const prompt = body.contents[0].parts[0].text;
+  const actId = prompt.match(/Qloo ID ([0-9A-F-]{36})/)[1];
+  const firstCity = prompt.match(/\n1\. (.+?) \(affinity/)[1];
+  const responses = body.contents.flatMap((c) => c.parts || []).filter((p) => p.functionResponse);
+  let part;
+  if (!responses.length) part = { functionCall: { name: "qloo_recommend", args: { target_type: "artist", signals: [actId], limit: 3 } } };
+  else {
+    const peer = responses[0].functionResponse.response.results[0].name;
+    part = { functionCall: { name: "submit_tour_plan", args: { headline: "h", cities: [{ city: firstCity, why: "w", evidence: [2] }, { city: "Gotham", why: "w", evidence: [] }], openers: [{ name: peer, why: "w", evidence: [3] }], partners: [], timing: "t", caveats: [] } } };
   }
   return { ok: true, json: async () => ({ candidates: [{ content: { role: "model", parts: [part] } }] }) };
 };
 
 const { planTour, AGENT_MODE } = await import("../lib/agent.js");
 
-test("Gemini agent loop: tool calls, responses fed back, grounded plan", async () => {
+test("Gemini agent loop: steps 1-2 run first, tool calls feed back, the plan is grounded", async () => {
   assert.equal(AGENT_MODE, "gemini");
   const events = [];
   const out = await planTour({ act: "Mitski", kind: "musician", region: "United States" }, (e) => events.push(e));
-  assert.equal(out.steps.length, 2);
-  assert.equal(events.filter((e) => e.type === "call").length, 2);
-  // the declared tools include the Qloo tools and submit_tour_plan
+  assert.equal(out.mode, "gemini");
+  assert.deepEqual(out.steps.map((s) => s.tool), ["qloo_resolve", "qloo_crowd_cities", "qloo_recommend"]);
   const decls = seenBodies[0].tools[0].functionDeclarations.map((d) => d.name);
-  assert.ok(decls.includes("qloo_where_popular") && decls.includes("submit_tour_plan"));
-  // every functionResponse carries a step number for evidence
-  const lastContents = seenBodies.at(-1).contents;
-  const responses = lastContents.flatMap((c) => c.parts || []).filter((p) => p.functionResponse);
-  assert.deepEqual(responses.map((r) => r.functionResponse.response.step), [1, 2]);
-  // the invented city is removed and disclosed
+  assert.ok(decls.includes("qloo_recommend") && decls.includes("submit_tour_plan"));
+  assert.ok(!decls.includes("qloo_where_popular") && !decls.includes("qloo_entity_tags"));
+  const responses = seenBodies.at(-1).contents.flatMap((c) => c.parts || []).filter((p) => p.functionResponse);
+  assert.deepEqual(responses.map((r) => r.functionResponse.response.step), [3]);
   assert.equal(out.plan.cities.length, 1);
   assert.match(out.plan.caveats.at(-1), /Gotham/);
+  assert.equal(out.plan.openers.length, 1);
+});
+
+test("if Gemini fails (for example the free-tier quota), the fixed workflow finishes the plan", async () => {
+  scenario = "quota";
+  const events = [];
+  const out = await planTour({ act: "Mitski", kind: "musician", region: "United States" }, (e) => events.push(e));
+  assert.equal(out.mode, "planner");
+  assert.ok(events.some((e) => e.type === "note"));
+  assert.ok(out.plan.cities.length >= 4 && out.plan.openers.length >= 1);
 });

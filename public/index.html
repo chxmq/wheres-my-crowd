@@ -47,6 +47,8 @@
           <label for="notes">Anything the agent should know <span class="opt">(optional)</span></label>
           <input id="notes" name="notes" type="text" maxlength="240" placeholder="e.g. small rooms only, 6 dates in March">
         </div>
+        <p class="hint">Notes are used when the Gemini agent is on.</p>
+        <div class="choices" id="choices" role="group" aria-live="polite" hidden></div>
         <p class="error" id="form-error" role="alert" hidden></p>
         <button type="submit" class="go" id="go">Find my crowd</button>
         <p class="mode" id="mode"></p>
@@ -68,7 +70,7 @@
   </main>
 
   <footer class="foot">
-    <p>Qloo results describe aggregate audience affinities, not individual fans. Where's My Crowd sends Qloo only act names and regions, never personal data. <a href="https://github.com/chxmq/wheres-my-crowd">Source code</a> (MIT).</p>
+    <p>Qloo results describe aggregate audience affinities, not individual fans. Where's My Crowd sends Qloo only act names, regions and city names, never personal data. City names: <a href="https://www.geonames.org/">GeoNames</a> (CC BY 4.0). <a href="https://github.com/chxmq/wheres-my-crowd">Source code</a> (MIT).</p>
   </footer>
   <script type="module" src="app.js"></script>
 </body>

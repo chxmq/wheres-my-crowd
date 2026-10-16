@@ -74,7 +74,14 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 .chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
 .chip { font-size: .82rem; background: var(--paper); border-radius: 999px; padding: .15rem .6rem; }
 .chip i { font-style: normal; color: var(--ink-soft); margin-left: .3rem; }
+.step-via { font-size: .76rem; color: var(--ink-soft); margin-top: .35rem; overflow-wrap: anywhere; }
+.step-via:empty { display: none; }
 .thought { font-size: .9rem; color: var(--ink-soft); border-left: 3px solid var(--amber); padding-left: .7rem; }
+.choices { margin-top: 1rem; border: 2px solid var(--amber); border-radius: 12px; padding: .8rem; font-size: .92rem; }
+.choice-list { display: grid; gap: .4rem; margin-top: .5rem; }
+.choice { text-align: left; border: 1px solid var(--rule); background: var(--paper); border-radius: 10px; padding: .5rem .7rem; cursor: pointer; min-height: 44px; }
+.choice:hover { border-color: var(--blue); }
+.choice span { display: block; font-size: .82rem; color: var(--ink-soft); }
 .step.flash { box-shadow: 0 0 0 3px var(--amber); }
 
 /* the tour poster */
@@ -84,7 +91,12 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
   display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem;
 }
 .poster .act { font-weight: 900; font-size: clamp(3rem, 9vw, 7.5rem); line-height: .86; font-variation-settings: "wdth" 62; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.poster .tags { margin-top: .8rem; font-size: .9rem; color: #DCE1FF; max-width: 52ch; }
 .poster .headline { margin-top: 1rem; font-size: 1.2rem; max-width: 46ch; color: #DCE1FF; }
+.date-city small { font-size: .8rem; font-weight: 400; color: #DCE1FF; margin-left: .4rem; font-variation-settings: "wdth" 100; }
+.spark { display: block; width: 100%; max-width: 240px; height: 48px; color: var(--amber); margin: .3rem 0 .4rem; }
+.poster-foot h3 + p { margin-bottom: .8rem; }
+.poster-foot .caveats { grid-column: 1 / -1; }
 .poster .with { margin-top: 1.4rem; font-weight: 800; font-size: 1.4rem; font-variation-settings: "wdth" 75; }
 .poster .with span { color: var(--amber); }
 .poster .with-why { color: #DCE1FF; font-size: .95rem; margin-top: .2rem; max-width: 46ch; }

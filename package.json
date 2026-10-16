@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "MOCK=1 node server.js",
-    "test": "node --test test/*.test.js"
+    "dev:live": "node --env-file=.env server.js",
+    "test": "node --test test/*.test.js",
+    "smoke:live": "node --env-file-if-exists=.env scripts/smoke-live.mjs",
+    "build:cities": "node scripts/build-cities.mjs"
   },
   "license": "MIT",
   "type": "module",

@@ -1,0 +1,10 @@
+{
+  "_source": "docs.qloo.com/reference/get-trending, OpenAPI response schema example values (one point)",
+  "success": true,
+  "duration": 123,
+  "results": {
+    "trending": [
+      { "date": "2025-01-03", "population_percentile": 85.2, "population_rank": 150, "population_rank_velocity": 5, "velocity_fold_change": 1.15, "population_percent_delta": 1.15 }
+    ]
+  }
+}
