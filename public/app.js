@@ -95,32 +95,52 @@ function renderChoices(e, body) {
 function renderPoster(out) {
   const p = out.plan;
   lastPlan = out;
+  const key = (c) => String(c || "").toLowerCase().replace(/\s+/g, " ").trim();
   const partnersBy = {};
-  for (const x of p.partners) (partnersBy[x.city.toLowerCase()] ||= []).push(x);
+  for (const x of p.partners) (partnersBy[key(x.city)] ||= []).push(x);
+  const roomsBy = Object.fromEntries((p.rooms || []).map((r) => [key(r.city), r]));
+  const cityBy = Object.fromEntries(p.cities.map((c, i) => [key(c.city), { ...c, rank: i + 1 }]));
+  const stat = (c) => p.cityStats?.[key(c)];
   const opener = p.openers[0];
-  const stat = (c) => p.cityStats?.[c.toLowerCase().replace(/\s+/g, " ").trim()];
+  const fitLabel = { opener: "with special guest", small: "with special guest", "co-headline": "co-headline idea:", unknown: "with" };
+  // Tour order: the route when there is one, otherwise demand order.
+  const days = p.route?.days?.length ? p.route.days : p.cities.map((c, i) => ({ day: i + 1, city: c.city, travel: null }));
+  const travelText = (t) => !t ? "Start here" : t.mode === "fly" ? `Fly from ${esc(t.from)} · ${t.km.toLocaleString()} km` : `Drive from ${esc(t.from)} · ${t.km.toLocaleString()} km, about ${t.hours} h`;
   $("#poster").innerHTML = `
     <div>
       ${out.sample ? '<p><span class="sample-flag">Sample data. Add a Qloo key for real results.</span></p>' : ""}
       <h2 class="act">${esc(p.act?.name)}</h2>
       ${p.act?.tags?.length ? `<p class="tags">Qloo tags: ${p.act.tags.map(esc).join(" · ")}</p>` : ""}
       <p class="headline">${esc(p.headline)}</p>
-      ${opener ? `<p class="with">with special guest <span>${esc(opener.name)}</span>${ev(opener.evidence)}</p><p class="with-why">${esc(opener.why)}${p.openers.slice(1).length ? ` Also consider ${p.openers.slice(1).map((o) => esc(o.name)).join(" and ")}.` : ""}</p>` : ""}
+      ${opener ? `<p class="with">${fitLabel[opener.fit] || "with"} <span>${esc(opener.name)}</span>${ev(opener.evidence)}</p>
+        <p class="with-why">${esc(opener.why)} ${esc(opener.fitNote || "")}${p.openers.slice(1).length ? ` Also: ${p.openers.slice(1).map((o) => `${esc(o.name)}${o.fit === "co-headline" ? " (co-headliner, out-draws you)" : ""}`).join(", ")}.` : ""}</p>` : ""}
+      ${p.route?.legs?.length ? `<p class="route-sum">Route: ${p.route.order.map(esc).join(" → ")} · ${p.route.totalKm.toLocaleString()} km · ${days.length} days</p>` : ""}
     </div>
-    <ol class="dates" aria-label="Tour stops, best first">
-      ${p.cities.map((c, i) => {
-        const partners = partnersBy[c.city.toLowerCase()] || [];
-        const s = stat(c.city);
+    <ol class="dates" aria-label="Tour days in route order">
+      ${days.map((d) => {
+        if (!d.city) return `<li class="date off"><span class="date-n">D${d.day}</span><div><p class="date-why">${d.off ? "Day off" : `Travel day: ${travelText(d.travel)}`}</p></div></li>`;
+        const c = cityBy[key(d.city)] || { city: d.city, why: "", evidence: [] };
+        const s = stat(d.city), rooms = roomsBy[key(d.city)], partners = partnersBy[key(d.city)] || [];
         return `<li class="date">
-          <span class="date-n">${String(i + 1).padStart(2, "0")}</span>
+          <span class="date-n">D${d.day}</span>
           <div>
-            <p class="date-city">${esc(c.city)}${s?.admin1 ? `<small>${esc(s.admin1)}</small>` : ""}${ev(c.evidence)}</p>
+            <p class="date-city">${esc(d.city)}${s?.admin1 ? `<small>${esc(s.admin1)}</small>` : ""}${ev(c.evidence)}<small class="rank">#${c.rank || "–"} for demand</small></p>
+            <p class="date-travel">${travelText(d.travel)}</p>
             <p class="date-why">${esc(c.why)}</p>
-            ${partners.length ? `<p class="date-partners">Crowd favourites: ${partners.map((x) => `<b>${esc(x.name)}</b>${ev(x.evidence)}`).join(", ")}</p>` : ""}
+            ${rooms ? (rooms.rooms.length
+              ? `<p class="date-rooms">Rooms to pitch: ${rooms.rooms.map((r) => `<b>${esc(r.name)}</b>${r.affinity != null ? ` <span class="aff">${r.affinity}</span>` : ""}`).join(", ")}${ev(rooms.evidence)}</p>`
+              : `<p class="date-rooms muted">Qloo returned no ${out.plan.kind === "comedian" ? "comedy clubs" : "music venues"} for this crowd here.${ev(rooms.evidence)}</p>`) : ""}
+            ${partners.length ? `<p class="date-partners">Promo partners this crowd loves: ${partners.map((x) => `<b>${esc(x.name)}</b>${ev(x.evidence)}`).join(", ")}</p>` : ""}
           </div>
         </li>`;
       }).join("") || '<li class="date"><span></span><p class="date-why">No cities came back for this region. Try a nearby region or a better-known reference act.</p></li>'}
     </ol>
+    ${(p.pitches?.length || p.route) ? `<div class="kit">
+      <h3>Booking kit</h3>
+      <p>Everything here uses only the Qloo results above.</p>
+      <div class="kit-actions"><button type="button" class="kit-btn" data-kit="csv">Download booking sheet (CSV)</button></div>
+      ${(p.pitches || []).map((x, i) => `<details class="pitch"><summary>Pitch email to <b>${esc(x.room)}</b>, ${esc(x.city)}</summary><pre>${esc(x.email)}</pre><button type="button" class="kit-btn" data-kit="pitch" data-i="${i}">Copy email</button></details>`).join("")}
+    </div>` : ""}
     <div class="poster-foot">
       <div><h3>When to go</h3>${sparkline(p.trend)}<p>${esc(p.timing)}</p></div>
       <div>
@@ -132,6 +152,19 @@ function renderPoster(out) {
   $("#poster-wrap").hidden = false;
   $("#poster-wrap").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
 }
+
+$("#poster").addEventListener("click", async (e) => {
+  const k = e.target.closest(".kit-btn");
+  if (!k || !lastPlan) return;
+  const p = lastPlan.plan;
+  if (k.dataset.kit === "csv") {
+    const blob = new Blob([p.bookingCsv || ""], { type: "text/csv" });
+    const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: `${(p.act?.name || "tour").replace(/[^\w]+/g, "-")}-booking-sheet.csv` });
+    document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  } else {
+    try { await navigator.clipboard.writeText(p.pitches[Number(k.dataset.i)].email); k.textContent = "Copied"; } catch { k.textContent = "Couldn’t copy"; }
+  }
+});
 
 $("#poster").addEventListener("click", (e) => {
   const b = e.target.closest(".ev");

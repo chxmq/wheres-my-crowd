@@ -35,7 +35,8 @@ test("Gemini agent loop: steps 1-2 run first, tool calls feed back, the plan is 
   const events = [];
   const out = await planTour({ act: "Mitski", kind: "musician", region: "United States" }, (e) => events.push(e));
   assert.equal(out.mode, "gemini");
-  assert.deepEqual(out.steps.map((s) => s.tool), ["qloo_resolve", "qloo_crowd_cities", "qloo_recommend"]);
+  assert.deepEqual(out.steps.slice(0, 3).map((s) => s.tool), ["qloo_resolve", "qloo_crowd_cities", "qloo_recommend"]);
+  assert.ok(out.steps.slice(3).every((s) => /^Rooms to pitch in /.test(s.label)), "after the agent, only the booking layer's rooms lookups run");
   const decls = seenBodies[0].tools[0].functionDeclarations.map((d) => d.name);
   assert.ok(decls.includes("qloo_recommend") && decls.includes("submit_tour_plan"));
   assert.ok(!decls.includes("qloo_where_popular") && !decls.includes("qloo_entity_tags"));

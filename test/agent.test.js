@@ -45,7 +45,12 @@ for (const [input, peerLabel] of [
     const out = await planTour(input, (e) => events.push(e));
     assert.equal(out.mode, "planner");
     assert.equal(out.sample, true);
-    assert.deepEqual(out.steps.map((s) => s.tool), ["qloo_resolve", "qloo_crowd_cities", "qloo_recommend", "qloo_rank", "qloo_compare_audiences", "qloo_recommend", "qloo_recommend", "qloo_recommend", "qloo_trends", "qloo_audience_demographics"]);
+    const tools = out.steps.map((s) => s.tool);
+    assert.deepEqual(tools.slice(0, 10), ["qloo_resolve", "qloo_crowd_cities", "qloo_recommend", "qloo_rank", "qloo_compare_audiences", "qloo_recommend", "qloo_recommend", "qloo_recommend", "qloo_trends", "qloo_audience_demographics"]);
+    // then the booking layer: one rooms lookup per top city, by Qloo venue category
+    const rooms = out.steps.slice(10);
+    assert.ok(rooms.length >= 1 && rooms.every((s) => s.tool === "qloo_recommend" && /^Rooms to pitch in /.test(s.label) && s.args.include_tags?.length));
+    assert.ok(out.plan.route && out.plan.route.order.length === Math.min(out.plan.cities.length, out.plan.route.order.length));
     assert.ok(out.steps.every((s) => s.status === "ok"));
     assert.equal(events.filter((e) => e.type === "call").length, out.steps.length);
     const p = out.plan;

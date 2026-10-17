@@ -125,3 +125,20 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
   .poster-foot { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Booking layer */
+.route-sum { margin-top: 14px; font-weight: 600; }
+.date.off { opacity: .75; }
+.date-travel { font-size: .85rem; opacity: .85; margin: 2px 0 4px; }
+.date-city .rank { margin-left: 8px; font-size: .75rem; opacity: .8; font-weight: 500; }
+.date-rooms { margin-top: 6px; }
+.date-rooms .aff { font-size: .8em; opacity: .8; }
+.date-rooms.muted { opacity: .8; font-style: italic; }
+.kit { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.35); padding-top: 18px; margin-top: 8px; }
+.kit h3 { margin-bottom: 4px; }
+.kit-actions { margin: 10px 0; }
+.kit-btn { font: inherit; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 0; background: #FFC93C; color: #1b1f5e; cursor: pointer; }
+.kit-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.pitch { margin: 8px 0; background: rgba(255,255,255,.08); border-radius: 12px; padding: 10px 14px; }
+.pitch summary { cursor: pointer; }
+.pitch pre { white-space: pre-wrap; font: .85rem/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; margin: 10px 0; }
