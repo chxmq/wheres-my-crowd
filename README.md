@@ -2,7 +2,7 @@
 
 **A tour-planning agent for independent musicians and comedians, grounded in Qloo's taste graph.**
 
-Labels and big promoters pay data teams to know where an act's fans live, who shares their audience, and which local spots that crowd already loves. An independent act books a tour on guesswork and Instagram follower counts. Where's My Crowd gives that act the same picture: name the act (or an act you sound like) and a region, and the agent comes back with a tour poster: ranked cities, who to tour with, the local places your crowd loves in each stop, and the evidence behind every pick.
+Labels and big promoters pay data teams to know where an act's fans live, who shares their audience, and which local spots that crowd already loves. An independent act books a tour on guesswork and Instagram follower counts. Where's My Crowd gives that act the same picture, and turns it into a tour they can book: name the act (or an act you sound like) and a region, and the agent comes back with a routed tour (cities in travel order, drive or fly per leg, a day plan), the music or comedy rooms to pitch in each city, an opener who won't out-draw you, the places your crowd already hangs out for promotion, and a booking kit (a booking sheet and a pitch email per room). Every pick links to the Qloo call behind it.
 
 > If you removed Qloo, this product would not exist. A language model can guess "Brooklyn and Austin" for any indie act; it cannot know that *this* act's audience over-indexes in Kochi and Shillong, or which café in Pune that same crowd loves. That is Qloo's taste graph.
 
@@ -20,6 +20,13 @@ Every Qloo call goes through Qloo's official harness (`@qloo/qloo-harness`), sta
 | Local partners | `qloo_recommend` `target_type: place`, `filter_location` = city | Places this crowd loves in each top city: promo and after-show partners |
 | Who is the audience? | `qloo_audience_demographics` | Age and gender affinities, for the poster's caveats and targeting |
 | When to go | `qloo_trends` (last 20 weeks) | Momentum before fixing dates |
+| Rooms to pitch | `qloo_recommend` `target_type: place` with Qloo's venue categories (`live_music_venue`, `concert_hall`, `live_music_bar`; `comedy_club` for comedians) | Real rooms this crowd already goes to, ranked by affinity. Generic place results gave a comedian the symphony and a museum; the categories give Punch Line and Cobb's |
+
+**Booking layer** (`lib/booking.js`, plain rules over the Qloo results, so it never depends on the model):
+- **Opener draw check:** Qloo popularity of each suggested opener against the headliner's. Someone who out-draws you is flagged as a co-headliner, not an opener.
+- **Route:** the stops in travel order (nearest neighbour, then 2-opt), drive or fly per leg, and a day plan with travel and rest days.
+- **Booking kit:** a CSV booking sheet and a pitch email per room, written only from Qloo numbers.
+- **Map:** up to 1,500 of Qloo's heatmap cells drawn as a dot map with the route on top, as SVG from the plan's data, with no map tiles, so the visitor's browser contacts no third party.
 
 **Agent:** with `GEMINI_API_KEY` set, Gemini decides which Qloo tools to call and in what order (function calling over the harness's own MCP tool schemas, budget of 12 Qloo calls). Without it, a fixed booking workflow runs the same steps.
 
