@@ -53,12 +53,16 @@ app.post("/api/plan", async (req, res) => {
   res.set({ "Content-Type": "application/x-ndjson; charset=utf-8", "Cache-Control": "no-store", "X-Accel-Buffering": "no" });
   const emit = (event) => res.write(JSON.stringify(event) + "\n");
   emit({ type: "start", mode: AGENT_MODE, sample: SAMPLE_MODE });
+  // Keep the stream alive through proxies while a model call is in flight; the page ignores pings.
+  const ping = setInterval(() => emit({ type: "ping" }), 10000);
   try {
     const out = await planTour({ act, kind, region, notes, actId }, emit);
     if (!out.choose) emit({ type: "plan", ...out });
   } catch (e) {
     console.error("plan failed:", e.message);
     emit({ type: "error", message: e instanceof PlanError ? e.message : "Planning failed. Try again, or try a different spelling of the act." });
+  } finally {
+    clearInterval(ping);
   }
   res.end();
 });

@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 process.env.MOCK = "1";
 process.env.GEMINI_API_KEY = "test-key";
+process.env.GEMINI_CALL_MS = "300"; // so the "hangs" scenario times out fast
 
 // Scripted model: after steps 1-2 (done by the server), one Qloo call, then a plan
 // with one invented city. A second scenario simulates the free tier running out.
@@ -12,6 +13,7 @@ globalThis.fetch = async (url, opts) => {
   assert.equal(opts.headers["x-goog-api-key"], "test-key");
   const body = JSON.parse(opts.body);
   seenBodies.push(body);
+  if (scenario === "hangs") return new Promise((_, reject) => opts.signal.addEventListener("abort", () => reject(opts.signal.reason)));
   if (scenario === "quota") return { ok: false, status: 429, json: async () => ({ error: { status: "RESOURCE_EXHAUSTED", message: "quota" } }) };
   const prompt = body.contents[0].parts[0].text;
   const actId = prompt.match(/Qloo ID ([0-9A-F-]{36})/)[1];
@@ -51,4 +53,15 @@ test("if Gemini fails (for example the free-tier quota), the fixed workflow fini
   assert.equal(out.mode, "planner");
   assert.ok(events.some((e) => e.type === "note"));
   assert.ok(out.plan.cities.length >= 4 && out.plan.openers.length >= 1);
+});
+
+test("if Gemini hangs (overloaded), each call is cut off and the fixed workflow still finishes", async () => {
+  scenario = "hangs";
+  const events = [];
+  const t0 = Date.now();
+  const out = await planTour({ act: "Mitski", kind: "musician", region: "United States" }, (e) => events.push(e));
+  assert.equal(out.mode, "planner");
+  assert.ok(Date.now() - t0 < 5000, "the timeout, not the hang, decides how long a visitor waits");
+  assert.ok(events.some((e) => e.type === "note"));
+  assert.ok(out.plan.cities.length >= 4);
 });
