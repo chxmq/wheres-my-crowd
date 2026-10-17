@@ -21,7 +21,7 @@ Every Qloo call goes through Qloo's official harness (`@qloo/qloo-harness`), sta
 | Who is the audience? | `qloo_audience_demographics` | Age and gender affinities, for the poster's caveats and targeting |
 | When to go | `qloo_trends` (last 20 weeks) | Momentum before fixing dates |
 
-**Agent:** with `GEMINI_API_KEY` set, Gemini decides which Qloo tools to call and in what order (function calling over the harness's own MCP tool schemas, budget of 14 calls). Without it, a fixed booking workflow runs the same steps.
+**Agent:** with `GEMINI_API_KEY` set, Gemini decides which Qloo tools to call and in what order (function calling over the harness's own MCP tool schemas, budget of 12 Qloo calls). Without it, a fixed booking workflow runs the same steps.
 
 **Grounding check:** before anything reaches the poster, every city, act and place the agent names is checked against the names Qloo actually returned. Anything else is removed, and the poster says what was removed.
 
