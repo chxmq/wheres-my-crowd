@@ -209,7 +209,7 @@ async function main() {
 }
 
 async function checkGemini() {
-  const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
+  const model = process.env.GEMINI_MODEL || "gemini-3.5-flash-lite";
   const base = "https://generativelanguage.googleapis.com/v1beta/models";
   const t0 = Date.now();
   const meta = await fetch(`${base}/${model}`, { headers: { "x-goog-api-key": GEMINI_KEY } }).catch((e) => ({ status: 0, json: async () => ({ error: { message: e.message } }) }));
