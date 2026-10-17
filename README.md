@@ -10,23 +10,27 @@ Labels and big promoters pay data teams to know where an act's fans live, who sh
 
 The agent works like a booking agent, one Qloo question at a time. Each question appears in the **booking log** as it happens, and every claim on the poster links back to the step that supports it.
 
-| Step | Qloo tool | Why it fits |
+Every Qloo call goes through Qloo's official harness (`@qloo/qloo-harness`), started as a subprocess on the server: its workflow tools (`qloo mcp`) for most steps, and its raw API server (`qloo api mcp`) for two steps where the workflow tools drop data the plan needs.
+
+| Step | Qloo call (through the harness) | Why it fits |
 |---|---|---|
-| Who is this act? | `qloo_describe` | Resolve the name to one Qloo entity before relying on it |
-| What defines the audience? | `qloo_entity_tags` | Concepts shared by the audience, used to explain picks |
-| Where is the crowd? | `qloo_where_popular` (`within` = region) | Geographic affinity: the core of a tour plan |
-| Who to tour with? | `qloo_recommend` → `qloo_rank` (in the top city) → `qloo_compare_audiences` | Candidate acts, ranked for this audience, with the overlap confirmed |
+| Who is this act? | `qloo_search` (raw API) | Resolve the name to exactly one Qloo entity, with its own tags; ask the user when several acts share the name |
+| Where is the crowd? | `qloo_insights` `filter.type=urn:heatmap` (raw API) | Every grid cell of the region's heatmap (thousands for a country), folded into cities of 300k+ people. `qloo_where_popular` keeps only the top 20 cells, which for a whole country are mostly remote areas |
+| Who to tour with? | `qloo_recommend` → `qloo_rank` (in the top city) → `qloo_compare_audiences` | Candidate acts, ranked for this audience in that city, with the overlap explained by shared tags |
 | Local partners | `qloo_recommend` `target_type: place`, `filter_location` = city | Places this crowd loves in each top city: promo and after-show partners |
-| When to go | `qloo_trends` (last 6 months) | Momentum before fixing dates |
+| Who is the audience? | `qloo_audience_demographics` | Age and gender affinities, for the poster's caveats and targeting |
+| When to go | `qloo_trends` (last 20 weeks) | Momentum before fixing dates |
 
 **Agent:** with `GEMINI_API_KEY` set, Gemini decides which Qloo tools to call and in what order (function calling over the harness's own MCP tool schemas, budget of 14 calls). Without it, a fixed booking workflow runs the same steps.
 
 **Grounding check:** before anything reaches the poster, every city, act and place the agent names is checked against the names Qloo actually returned. Anything else is removed, and the poster says what was removed.
 
 ### Example (request → result)
-`Prateek Kuhad`, musician, India →
-`qloo_where_popular {entity: "Prateek Kuhad", entity_type: "artist", within: "India"}` → ranked localities with affinity scores → top 6 become tour stops →
-`qloo_recommend {target_type: "place", signals: ["Prateek Kuhad"], filter_location: "<top city>"}` → places listed under that stop as crowd favourites.
+`Prateek Kuhad`, musician, India (live run, 18 Oct 2026) →
+`qloo_search {query: "Prateek Kuhad", type: urn:entity:artist}` → one exact match →
+`qloo_insights {type: urn:heatmap, signal_entities: <his Qloo ID>, filter_location: "India"}` → 3,100 grid cells → strongest cities Mumbai (0.994), Bengaluru (0.994), Pune (0.993) →
+`qloo_recommend` + `qloo_rank` → openers The Local Train, Anuv Jain, Tajdar Junaid →
+`qloo_recommend {target_type: "place", filter_location: "Mumbai"}` → places listed under that stop as crowd favourites.
 
 ## Responsible use
 - Qloo receives only act names, regions and city names: never personal data.

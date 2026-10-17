@@ -29,7 +29,7 @@ async function init() {
 
 function via(p) {
   if (!p) return "";
-  const how = p.transport === "direct" ? "direct" : "Qloo harness (MCP)";
+  const how = p.transport === "qloo api mcp" ? "Qloo harness (API server)" : "Qloo harness (workflows)";
   return `${p.source === "sample" ? "sample data" : `GET ${p.endpoint || ""}`} · ${how}`;
 }
 
