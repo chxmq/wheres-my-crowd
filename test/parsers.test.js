@@ -108,3 +108,8 @@ test("pick handles strings, compact tags and objects without names", () => {
   assert.deepEqual(pick({ id: "urn:tag:x", name: "X", type: "urn:tag:genre:music", affinity: 0.91234 }), { name: "X", id: "urn:tag:x", score: 0.912, kind: "urn:tag:genre:music" });
   assert.equal(pick({ query: { affinity: 1 } }), null);
 });
+
+test("HTML-encoded Qloo names are decoded once", async () => {
+  const { pick } = await import("../lib/qloo.js");
+  assert.equal(pick({ name: "Bubsterr&#39;s Bar &amp; Kitchen", entity_id: "x" }).name, "Bubsterr's Bar & Kitchen");
+});

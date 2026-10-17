@@ -142,3 +142,15 @@ main { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 .pitch { margin: 8px 0; background: rgba(255,255,255,.08); border-radius: 12px; padding: 10px 14px; }
 .pitch summary { cursor: pointer; }
 .pitch pre { white-space: pre-wrap; font: .85rem/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; margin: 10px 0; }
+
+/* Dot map */
+.tour-map { margin: 18px 0 0; }
+.tour-map svg { width: 100%; height: auto; display: block; background: rgba(0,0,0,.12); border-radius: 14px; }
+.tour-map .dot { fill: #FFC93C; }
+.tour-map .leg { stroke: #fff; stroke-width: 2.4; stroke-linecap: round; }
+.tour-map .leg.fly { stroke-dasharray: 2 7; }
+.tour-map .stop circle { fill: #fff; stroke: #1b1f5e; stroke-width: 2; }
+.tour-map .stop text { font: 800 12px/1 Archivo, system-ui, sans-serif; }
+.tour-map .stop text.num { text-anchor: middle; fill: #1b1f5e; }
+.tour-map .stop text.lbl { fill: #fff; font-weight: 700; paint-order: stroke; stroke: rgba(20,24,80,.85); stroke-width: 3px; }
+.tour-map figcaption { font-size: .8rem; opacity: .85; margin-top: 6px; }

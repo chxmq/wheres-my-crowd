@@ -92,6 +92,46 @@ function renderChoices(e, body) {
   }));
 }
 
+// Dot map of Qloo's heatmap cells for the region: brighter dots, stronger crowd. The tour route on top.
+// Drawn from the plan's own data: no map tiles, so no third-party requests from the visitor's browser.
+function tourMap(p) {
+  const dots = p.map?.dots || [];
+  if (dots.length < 20) return "";
+  const W = 560, H = 420, pad = 18;
+  const lat0 = dots.reduce((a, d) => a + d[0], 0) / dots.length, k = Math.cos((lat0 * Math.PI) / 180);
+  const xs = dots.map((d) => d[1] * k), ys = dots.map((d) => -d[0]);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  const sc = Math.min((W - 2 * pad) / (x1 - x0 || 1), (H - 2 * pad) / (y1 - y0 || 1));
+  const px = (lat, lon) => [pad + (lon * k - x0) * sc + ((W - 2 * pad) - (x1 - x0) * sc) / 2, pad + (-lat - y0) * sc + ((H - 2 * pad) - (y1 - y0) * sc) / 2];
+  const affs = dots.map((d) => d[2]).sort((a, b) => a - b), lo = affs[Math.floor(affs.length * 0.05)], hi = affs.at(-1);
+  const order = p.route?.order?.length ? p.route.order : p.cities.map((c) => c.city);
+  const stops = order.map((name) => ({ name, at: p.map.stops?.[name] })).filter((x) => x.at);
+  const legs = p.route?.legs || [];
+  const path = stops.slice(1).map((s, i) => {
+    const [ax, ay] = px(...stops[i].at), [bx, by] = px(...s.at);
+    const fly = legs[i]?.mode === "fly";
+    return `<line x1="${ax.toFixed(1)}" y1="${ay.toFixed(1)}" x2="${bx.toFixed(1)}" y2="${by.toFixed(1)}" class="leg${fly ? " fly" : ""}"/>`;
+  }).join("");
+  return `<figure class="tour-map">
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Map of ${esc(p.region)}: ${dots.length} Qloo heatmap cells, brighter where ${esc(p.act?.name)}'s crowd is stronger, with the tour route ${esc(order.join(", "))}">
+      ${dots.map((d) => { const [x, y] = px(d[0], d[1]); const t = Math.max(0, Math.min(1, (d[2] - lo) / (hi - lo || 1))); return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(1.2 + t * 1.6).toFixed(1)}" fill-opacity="${(0.15 + t * 0.75).toFixed(2)}" class="dot"/>`; }).join("")}
+      ${path}
+      ${(() => { const placed = []; return stops.map((s, i) => {
+        const [x, y] = px(...s.at);
+        // Put the label on the right unless it would sit on a label already placed; then left, then below.
+        const tries = [[x + 15, y + 5, "start"], [x - 15, y + 5, "end"], [x, y + 26, "middle"], [x, y - 16, "middle"]];
+        const w = s.name.length * 7.2;
+        const box = ([lx, ly, a]) => { const l = a === "start" ? lx : a === "end" ? lx - w : lx - w / 2; return [l, ly - 12, l + w, ly + 3]; };
+        const hit = (b) => placed.some((q) => !(b[2] < q[0] || b[0] > q[2] || b[3] < q[1] || b[1] > q[3])) || stops.some((o, j) => j !== i && (() => { const [ox, oy] = px(...o.at); return ox > b[0] - 11 && ox < b[2] + 11 && oy > b[1] - 11 && oy < b[3] + 11; })());
+        const pick = tries.find((t) => !hit(box(t))) || tries[0];
+        placed.push(box(pick));
+        return `<g class="stop"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11"/><text class="num" x="${x.toFixed(1)}" y="${(y + 4).toFixed(1)}">${i + 1}</text><text class="lbl" x="${pick[0].toFixed(1)}" y="${pick[1].toFixed(1)}" text-anchor="${pick[2]}">${esc(s.name)}</text></g>`;
+      }).join(""); })()}
+    </svg>
+    <figcaption>Each dot is one of the ${(p.cells || dots.length).toLocaleString()} areas Qloo scored in ${esc(p.region)} (strongest ${dots.length} shown); brighter means a stronger crowd. Numbers are the route; dashed legs are flights.${ev(p.map.evidence)}</figcaption>
+  </figure>`;
+}
+
 function renderPoster(out) {
   const p = out.plan;
   lastPlan = out;
@@ -115,6 +155,7 @@ function renderPoster(out) {
       ${opener ? `<p class="with">${fitLabel[opener.fit] || "with"} <span>${esc(opener.name)}</span>${ev(opener.evidence)}</p>
         <p class="with-why">${esc(opener.why)} ${esc(opener.fitNote || "")}${p.openers.slice(1).length ? ` Also: ${p.openers.slice(1).map((o) => `${esc(o.name)}${o.fit === "co-headline" ? " (co-headliner, out-draws you)" : ""}`).join(", ")}.` : ""}</p>` : ""}
       ${p.route?.legs?.length ? `<p class="route-sum">Route: ${p.route.order.map(esc).join(" → ")} · ${p.route.totalKm.toLocaleString()} km · ${days.length} days</p>` : ""}
+      ${tourMap(p)}
     </div>
     <ol class="dates" aria-label="Tour days in route order">
       ${days.map((d) => {
