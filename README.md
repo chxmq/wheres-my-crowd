@@ -15,7 +15,7 @@ Every Qloo call goes through Qloo's official harness (`@qloo/qloo-harness`), sta
 | Step | Qloo call (through the harness) | Why it fits |
 |---|---|---|
 | Who is this act? | `qloo_search` (raw API) | Resolve the name to exactly one Qloo entity, with its own tags; ask the user when several acts share the name |
-| Where is the crowd? | `qloo_insights` `filter.type=urn:heatmap` (raw API) | Every grid cell of the region's heatmap (thousands for a country), folded into cities of 300k+ people. `qloo_where_popular` keeps only the top 20 cells, which for a whole country are mostly remote areas |
+| Where is the crowd? | `qloo_insights` `filter.type=urn:heatmap` (raw API) | Every grid cell of the region's heatmap (thousands for a country), folded into cities of 300k+ people and ranked by **fit**: the city's Qloo affinity for this crowd, balanced 60/40 with city size ([backtest](backtest/README.md)). `qloo_where_popular` keeps only the top 20 cells, which for a whole country are mostly remote areas |
 | Who to tour with? | `qloo_recommend` → `qloo_rank` (in the top city) → `qloo_compare_audiences` | Candidate acts, ranked for this audience in that city, with the overlap explained by shared tags |
 | Local partners | `qloo_recommend` `target_type: place`, `filter_location` = city | Places this crowd loves in each top city: promo and after-show partners |
 | Who is the audience? | `qloo_audience_demographics` | Age and gender affinities, for the poster's caveats and targeting |
@@ -31,6 +31,9 @@ Every Qloo call goes through Qloo's official harness (`@qloo/qloo-harness`), sta
 **Agent:** with `GEMINI_API_KEY` set, Gemini decides which Qloo tools to call and in what order (function calling over the harness's own MCP tool schemas, budget of 12 Qloo calls). Without it, a fixed booking workflow runs the same steps.
 
 **Grounding check:** before anything reaches the poster, every city, act and place the agent names is checked against the names Qloo actually returned. Anything else is removed, and the poster says what was removed.
+
+### Does it pick the right cities?
+We tested the city ranking against **282 real tours** (2022–2025, US dates from Wikipedia's tour tables). On 178 tours held out from tuning, **77.9%** of the app's top 8 cities were cities the artist actually played, against 70.6% for the 8 biggest US cities and 70.2% for our first ranking (strongest affinity cell), which the test made us replace. Method, examples, limits and the scripts to rerun it: [`backtest/`](backtest/README.md).
 
 ### Example (request → result)
 `Prateek Kuhad`, musician, India (live run, 18 Oct 2026) →
@@ -58,7 +61,7 @@ node --env-file=.env server.js
 Without `QLOO_API_KEY` the app runs on clearly-labelled **sample data**, for development only.
 
 ```sh
-npm test   # grounding, schema conversion, result parsing, both agent modes
+npm test   # grounding, schema conversion, result parsing, city ranking, booking rules, both agent modes
 ```
 
 ### Deploy
@@ -67,12 +70,12 @@ Qloo's harness needs a long-running Node process, so serverless hosts are not su
 - **Docker:** `docker build -t wmc . && docker run -p 8080:8080 -e QLOO_API_KEY=… wmc`
 
 ## Limits
-- Venue capacities, routing distances, promoter relationships and ticket prices are outside Qloo's data and outside this tool.
+- Venue capacities, promoter relationships and ticket prices are outside Qloo's data and outside this tool.
 - Smaller acts may not be in Qloo yet. Use an act you sound like as the reference.
 - Affinity scores from separate calls are not comparable (Qloo's own guidance), so the poster compares cities only within one `where_popular` call.
 
 ## Data credits
-City names, coordinates and populations in `data/cities.json` come from [GeoNames](https://www.geonames.org) (cities15000), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Taste data comes from the Qloo API at request time and is not stored in this repository.
+City names, coordinates and populations in `data/cities.json` come from [GeoNames](https://www.geonames.org) (cities15000), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Taste data comes from the Qloo API at request time and is not stored in this repository. The backtest's tour dates come from Wikipedia ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
 
 ## License
 MIT. Built for the Qloo Agentic Hackathon (2026).
