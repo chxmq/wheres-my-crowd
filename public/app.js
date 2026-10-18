@@ -165,7 +165,7 @@ function renderPoster(out) {
         return `<li class="date">
           <span class="date-n">D${d.day}</span>
           <div>
-            <p class="date-city">${esc(d.city)}${s?.admin1 ? `<small>${esc(s.admin1)}</small>` : ""}${ev(c.evidence)}<small class="rank">#${c.rank || "–"} for demand</small></p>
+            <p class="date-city">${esc(d.city)}${s?.admin1 ? `<small>${esc(s.admin1)}</small>` : ""}${ev(c.evidence)}<small class="rank">#${c.rank || "–"} pick</small></p>
             <p class="date-travel">${travelText(d.travel)}</p>
             <p class="date-why">${esc(c.why)}</p>
             ${rooms ? (rooms.rooms.length

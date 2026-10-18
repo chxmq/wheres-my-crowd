@@ -24,7 +24,7 @@ test("one stop per market, and strong cells away from the stops are named after 
   const cell = (lat, lon, affinity) => ({ location: { latitude: lat, longitude: lon, geohash: geohash(lat, lon, 4) }, query: { affinity, popularity: 0.9 } });
   const points = [
     cell(37.7749, -122.4194, 0.99), // San Francisco
-    cell(37.3382, -121.8863, 0.98), // San Jose: same market as San Francisco
+    cell(37.3382, -121.8863, 0.5),  // San Jose: same market as San Francisco, weaker for this crowd
     cell(47.6062, -122.3321, 0.97), // Seattle
     cell(35.5951, -82.5515, 0.995), // Asheville, NC: no 300k+ city within 80 km
     cell(40.0, -100.0, 0.1),

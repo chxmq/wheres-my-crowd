@@ -1,0 +1,7654 @@
+{
+ "summary": {
+  "K": 8,
+  "metroKm": 60,
+  "tours": 178,
+  "skipped": 12,
+  "train": 104,
+  "test": 178,
+  "precisionAtK": {
+   "Population only": {
+    "test": 0.706,
+    "all": 0.706
+   },
+   "Old app ranking (strongest affinity cell)": {
+    "test": 0.702,
+    "all": 0.702
+   },
+   "Where's My Crowd (shipped: demand)": {
+    "test": 0.779,
+    "all": 0.779
+   },
+   "Qloo cell popularity": {
+    "test": 0.748,
+    "all": 0.748
+   },
+   "Blend: Qloo affinity 0.6 + size 0.4 (weight tuned on dev tours)": {
+    "test": 0.779,
+    "all": 0.779
+   }
+  },
+  "trainCurve": [
+   {
+    "w": 0,
+    "p": 0.72
+   },
+   {
+    "w": 0.1,
+    "p": 0.726
+   },
+   {
+    "w": 0.2,
+    "p": 0.738
+   },
+   {
+    "w": 0.3,
+    "p": 0.745
+   },
+   {
+    "w": 0.4,
+    "p": 0.766
+   },
+   {
+    "w": 0.5,
+    "p": 0.781
+   },
+   {
+    "w": 0.6,
+    "p": 0.796
+   },
+   {
+    "w": 0.7,
+    "p": 0.784
+   },
+   {
+    "w": 0.8,
+    "p": 0.77
+   },
+   {
+    "w": 0.9,
+    "p": 0.76
+   },
+   {
+    "w": 1,
+    "p": 0.731
+   }
+  ],
+  "blendVsPopulationOnTest": {
+   "better": 103,
+   "tie": 43,
+   "worse": 32
+  }
+ },
+ "rows": [
+  {
+   "artist": "Bad Bunny",
+   "tour": "World's Hottest Tour",
+   "qloo": {
+    "id": "BDA1B73F-10E7-4D09-AC51-B796CCEC5FF3",
+    "name": "Bad Bunny",
+    "popularity": 0.994
+   },
+   "played": 16,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "El Paso",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "El Paso",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Lepa Brena",
+   "skipped": "only 7 US cities geocoded"
+  },
+  {
+   "artist": "Ed Sheeran",
+   "tour": "− Tour",
+   "qloo": {
+    "id": "058B79A3-49F5-4927-9AB6-DE713C706796",
+    "name": "Ed Sheeran",
+    "popularity": 1
+   },
+   "played": 14,
+   "notGeocoded": [
+    "Amagansett, New York",
+    "West Hollywood, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Boston ✓",
+    "Seattle ✓",
+    "Los Angeles ✓",
+    "San Francisco ✓",
+    "Columbus"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Boston ✓",
+    "Seattle ✓",
+    "Los Angeles ✓",
+    "San Francisco ✓",
+    "Columbus"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "5 Seconds of Summer",
+   "tour": "The 5 Seconds of Summer Show",
+   "qloo": {
+    "id": "CD934D72-BBB7-4810-AA0D-1E19646399D1",
+    "name": "5 Seconds of Summer",
+    "popularity": 0.996
+   },
+   "played": 18,
+   "notGeocoded": [
+    "Uncasville"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Philadelphia ✓",
+    "Columbus",
+    "Phoenix ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Philadelphia ✓",
+    "Columbus",
+    "Phoenix ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Laufey",
+   "tour": "Bewitched Tour",
+   "qloo": {
+    "id": "6C2BE7A7-4154-4F0B-BE10-E751AC9061CF",
+    "name": "Laufey",
+    "popularity": 0.963
+   },
+   "played": 30,
+   "notGeocoded": [
+    "Montauk, New York"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Ethel Cain",
+   "tour": "Blood Stained Blonde Tour",
+   "qloo": {
+    "id": "DD692BAE-4DA3-4E42-8331-EBB59A5634E5",
+    "name": "Ethel Cain",
+    "popularity": 0.98
+   },
+   "played": 20,
+   "notGeocoded": [
+    "Big Sur"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia",
+    "Boston",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia",
+    "Boston",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Madonna",
+   "tour": "The Celebration Tour",
+   "qloo": {
+    "id": "FF40690B-67D3-48EE-B09D-3CBE4FA28F70",
+    "name": "Madonna",
+    "popularity": 1
+   },
+   "played": 22,
+   "notGeocoded": [
+    "Thousand Palms, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Chicago ✓",
+    "Seattle ✓",
+    "Phoenix ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Chicago ✓",
+    "Seattle ✓",
+    "Phoenix ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Travis Scott",
+   "tour": "Circus Maximus Tour",
+   "qloo": {
+    "id": "1651869C-3277-47AC-8535-62784C799EDF",
+    "name": "Travis Scott",
+    "popularity": 0.988
+   },
+   "played": 32,
+   "notGeocoded": [
+    "Penn State University Park"
+   ],
+   "app": [
+    "New York City ✓",
+    "Houston",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Antonio",
+    "Austin ✓",
+    "Phoenix ✓",
+    "San Diego"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Houston",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Antonio",
+    "Austin ✓",
+    "Phoenix ✓",
+    "San Diego"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Queens of the Stone Age",
+   "tour": "The End Is Nero World Tour",
+   "qloo": {
+    "id": "155A5A06-6814-42D2-9633-962CD8385208",
+    "name": "Queens of the Stone Age",
+    "popularity": 1
+   },
+   "played": 45,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Taylor Swift",
+   "tour": "The Eras Tour",
+   "qloo": {
+    "id": "4BBEF799-A0C4-4110-AB01-39216993C312",
+    "name": "Taylor Swift",
+    "popularity": 1
+   },
+   "played": 23,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Fort Worth ✓",
+    "Jacksonville",
+    "Columbus",
+    "Indianapolis ✓",
+    "Phoenix ✓",
+    "Austin",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Fort Worth ✓",
+    "Jacksonville",
+    "Columbus",
+    "Indianapolis ✓",
+    "Phoenix ✓",
+    "Austin",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Louis Tomlinson",
+   "tour": "Faith in the Future World Tour",
+   "qloo": {
+    "id": "870D018E-7655-4F93-8F57-0BD348C403D0",
+    "name": "Louis Tomlinson",
+    "popularity": 0.976
+   },
+   "played": 32,
+   "notGeocoded": [
+    "Gilford, New Hampshire",
+    "St. Augustine, Florida",
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Boston ✓",
+    "Columbus ✓",
+    "San Francisco ✓",
+    "Philadelphia ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Boston ✓",
+    "Columbus ✓",
+    "San Francisco ✓",
+    "Philadelphia ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Kim Petras",
+   "tour": "Feed the Beast World Tour",
+   "qloo": {
+    "id": "0A0CB59C-6F7C-49B0-954E-BBD858D4F23B",
+    "name": "Kim Petras",
+    "popularity": 0.992
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Jonas Brothers",
+   "tour": "Five Albums. One Night. The World Tour",
+   "qloo": {
+    "id": "FF0F07D1-47B1-403A-975C-04BF98EAD8F9",
+    "name": "Jonas Brothers",
+    "popularity": 0.997
+   },
+   "played": 49,
+   "notGeocoded": [
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Phoenix ✓",
+    "Austin ✓",
+    "Nashville ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Phoenix ✓",
+    "Austin ✓",
+    "Nashville ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Romeo Santos",
+   "tour": "Fórmula, Vol. 3: La Gira",
+   "qloo": {
+    "id": "4E98364C-4184-412C-BAB3-06A75E63C90B",
+    "name": "Romeo Santos",
+    "popularity": 0.981
+   },
+   "played": 28,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Antonio ✓",
+    "Chicago",
+    "San Diego ✓",
+    "Philadelphia",
+    "El Paso ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Diego ✓",
+    "Philadelphia",
+    "El Paso ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Iron Maiden",
+   "tour": "The Future Past World Tour",
+   "qloo": {
+    "id": "BD2CDC36-5306-4213-A817-E7677E029CA6",
+    "name": "Iron Maiden",
+    "popularity": 1
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "Chicago",
+    "Phoenix ✓",
+    "Las Vegas ✓",
+    "Philadelphia ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "Chicago",
+    "Phoenix ✓",
+    "Las Vegas ✓",
+    "Philadelphia ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Sam Smith",
+   "tour": "Gloria the Tour",
+   "qloo": {
+    "id": "6062A977-79F7-48F9-917E-0B57D77474AD",
+    "name": "Sam Smith",
+    "popularity": 0.999
+   },
+   "played": 22,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Gracie Abrams",
+   "tour": "Good Riddance Tour",
+   "qloo": {
+    "id": "A01C72F0-9819-4732-B5CD-A22BF9ADB98A",
+    "name": "Gracie Abrams",
+    "popularity": 0.981
+   },
+   "played": 29,
+   "notGeocoded": [
+    "New York"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Guns N' Roses",
+   "tour": "Guns N' Roses 2023 Tour",
+   "qloo": {
+    "id": "CF6D89AA-9057-4D82-B88F-482FABB0A02B",
+    "name": "Guns N' Roses",
+    "popularity": 1
+   },
+   "played": 24,
+   "notGeocoded": [
+    "Hershey, Pennsylvania"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "El Paso",
+    "San Antonio ✓",
+    "Phoenix ✓",
+    "San Francisco"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "El Paso",
+    "San Antonio ✓",
+    "Phoenix ✓",
+    "San Francisco"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "NF",
+   "tour": "Hope Tour",
+   "qloo": {
+    "id": "57D96EB0-3826-4349-9189-E9DE40D38086",
+    "name": "NF",
+    "popularity": 0.987
+   },
+   "played": 43,
+   "notGeocoded": [
+    "Hershey, Pennsylvania",
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "Phoenix ✓",
+    "Columbus ✓",
+    "Indianapolis ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "Oklahoma City ✓",
+    "San Diego ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "Phoenix ✓",
+    "Columbus ✓",
+    "Indianapolis ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "Oklahoma City ✓",
+    "San Diego ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Peter Gabriel",
+   "tour": "I/O The Tour",
+   "qloo": {
+    "id": "8E0F5B9F-C234-4958-82C1-C933421FBD56",
+    "name": "Peter Gabriel",
+    "popularity": 0.998
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Boston ✓",
+    "San Diego"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Boston ✓",
+    "San Diego"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Chlöe",
+   "tour": "In Pieces Tour",
+   "qloo": {
+    "id": "68008154-0E62-4809-ACD9-F5497C5C7566",
+    "name": "Chlöe",
+    "popularity": 0.976
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "San Diego ✓",
+    "Columbus",
+    "Austin",
+    "Nashville",
+    "Fort Worth ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "Albuquerque"
+   ],
+   "blend": [
+    "San Diego ✓",
+    "Columbus",
+    "Austin",
+    "Nashville",
+    "Fort Worth ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "Albuquerque"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Weezer",
+   "tour": "Indie Rock Road Trip",
+   "qloo": {
+    "id": "FC4F7908-E4F0-41DD-8D5E-92928AE42457",
+    "name": "Weezer",
+    "popularity": 1
+   },
+   "played": 28,
+   "notGeocoded": [
+    "Bonner Springs, Kansas",
+    "Canandaigua, New York"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Boston"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Boston"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Victoria Monét",
+   "tour": "The Jaguar Tour",
+   "qloo": {
+    "id": "94E61B56-1EFA-4EDD-8F98-E15375EAE92B",
+    "name": "Victoria Monét",
+    "popularity": 0.975
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Houston ✓",
+    "Washington ✓",
+    "Dallas ✓",
+    "Las Vegas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Houston ✓",
+    "Washington ✓",
+    "Dallas ✓",
+    "Las Vegas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Janet Jackson",
+   "tour": "Janet Jackson: Together Again",
+   "qloo": {
+    "id": "3956AEB5-8D52-4B50-96BA-718DAC16B0CC",
+    "name": "Janet Jackson",
+    "popularity": 0.997
+   },
+   "played": 65,
+   "notGeocoded": [
+    "Hershey, Pennsylvania",
+    "Thousand Palms"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Washington ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Washington ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Alicia Keys",
+   "tour": "Keys to the Summer Tour",
+   "qloo": {
+    "id": "0B286746-9586-43B4-A57F-C848A004A0DA",
+    "name": "Alicia Keys",
+    "popularity": 0.999
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "San Jose",
+    "San Diego",
+    "Washington ✓",
+    "Dallas"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "San Jose",
+    "San Diego",
+    "Washington ✓",
+    "Dallas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Lana Del Rey",
+   "tour": "Lana Del Rey's 2023 tour",
+   "qloo": {
+    "id": "63BBE4D8-D721-466F-907C-D0007E9B6665",
+    "name": "Lana Del Rey",
+    "popularity": 1
+   },
+   "played": 15,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles",
+    "New York City",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Seattle",
+    "Portland"
+   ],
+   "blend": [
+    "Los Angeles",
+    "New York City",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Seattle",
+    "Portland"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Muna",
+   "tour": "Life's So Fun Tour",
+   "qloo": {
+    "id": "66B7AAEB-A547-41FF-AA06-93D97988F107",
+    "name": "Muna",
+    "popularity": 0.976
+   },
+   "played": 18,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Boston ✓",
+    "Portland"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Boston ✓",
+    "Portland"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Don Toliver",
+   "tour": "Love Sick Tour",
+   "qloo": {
+    "id": "C3A3AF26-9F87-4668-9ECA-3F0947DC6965",
+    "name": "Don Toliver",
+    "popularity": 0.984
+   },
+   "played": 18,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "San Antonio",
+    "Philadelphia ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "San Antonio",
+    "Philadelphia ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Luis Miguel",
+   "tour": "Luis Miguel Tour 2023–24",
+   "qloo": {
+    "id": "93614715-19D6-4663-AAEC-ADAEC82E5306",
+    "name": "Luis Miguel",
+    "popularity": 0.988
+   },
+   "played": 41,
+   "notGeocoded": [
+    "Hidalgo",
+    "Hidalgo, Texas",
+    "Thousand Palms",
+    "Thousand Palms, California",
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City ✓",
+    "San Diego ✓",
+    "San Antonio ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago",
+    "El Paso ✓",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "San Diego ✓",
+    "San Antonio ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago",
+    "El Paso ✓",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Luke Combs",
+   "tour": "Luke Combs World Tour",
+   "qloo": {
+    "id": "3CBD78B1-D2F2-4551-A342-4621B6BDB5E2",
+    "name": "Luke Combs",
+    "popularity": 0.971
+   },
+   "played": 14,
+   "notGeocoded": [],
+   "app": [
+    "Charlotte ✓",
+    "Nashville ✓",
+    "Columbus",
+    "Phoenix",
+    "Indianapolis ✓",
+    "Fort Worth ✓",
+    "Jacksonville",
+    "Louisville"
+   ],
+   "blend": [
+    "Charlotte ✓",
+    "Nashville ✓",
+    "Columbus",
+    "Phoenix",
+    "Indianapolis ✓",
+    "Fort Worth ✓",
+    "Jacksonville",
+    "Louisville"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Metallica",
+   "tour": "M72 World Tour",
+   "qloo": {
+    "id": "C445C761-CB38-4FEE-B085-D35F444A04DF",
+    "name": "Metallica",
+    "popularity": 1
+   },
+   "played": 34,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "San Antonio ✓",
+    "Phoenix ✓",
+    "San Francisco",
+    "El Paso ✓",
+    "Chicago ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "San Antonio ✓",
+    "Phoenix ✓",
+    "San Francisco",
+    "El Paso ✓",
+    "Chicago ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Karol G",
+   "tour": "Mañana Será Bonito Tour",
+   "qloo": {
+    "id": "658495BB-DF77-472E-A6B2-9E37FF248FB3",
+    "name": "Karol G",
+    "popularity": 0.983
+   },
+   "played": 12,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Antonio ✓",
+    "Chicago ✓",
+    "San Diego",
+    "El Paso",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Antonio ✓",
+    "Chicago ✓",
+    "San Diego",
+    "El Paso",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Depeche Mode",
+   "tour": "Memento Mori World Tour",
+   "qloo": {
+    "id": "83DA77D5-4364-4E55-93D3-A8420CDD354A",
+    "name": "Depeche Mode",
+    "popularity": 1
+   },
+   "played": 29,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Antonio ✓",
+    "Austin ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Antonio ✓",
+    "Austin ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Mariah Carey",
+   "tour": "Merry Christmas One and All!",
+   "qloo": {
+    "id": "CDB8A65C-3BF0-47BF-A336-2CFC70417D7F",
+    "name": "Mariah Carey",
+    "popularity": 0.999
+   },
+   "played": 12,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco",
+    "San Antonio",
+    "Phoenix",
+    "Las Vegas"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco",
+    "San Antonio",
+    "Phoenix",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Becky G",
+   "tour": "Mi Casa, Tu Casa Tour",
+   "qloo": {
+    "id": "89022299-45D9-4F18-A535-EDF7FC7F583F",
+    "name": "Becky G",
+    "popularity": 0.99
+   },
+   "played": 16,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "El Paso ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "El Paso ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Chappell Roan",
+   "tour": "The Midwest Princess Tour",
+   "qloo": {
+    "id": "1C8D8828-5739-4304-9506-BA01B3D63516",
+    "name": "Chappell Roan",
+    "popularity": 0.994
+   },
+   "played": 63,
+   "notGeocoded": [
+    "Gulf Shores, Alabama"
+   ],
+   "app": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Seattle ✓",
+    "Boston ✓",
+    "Austin ✓",
+    "Portland ✓",
+    "San Francisco ✓",
+    "Columbus ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Seattle ✓",
+    "Boston ✓",
+    "Austin ✓",
+    "Portland ✓",
+    "San Francisco ✓",
+    "Columbus ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Tea Tairović",
+   "skipped": "needs_input: Qloo has no exact match for \"Tea Tairović\"."
+  },
+  {
+   "artist": "Chappell Roan",
+   "tour": "Naked in North America Tour",
+   "qloo": {
+    "id": "1C8D8828-5739-4304-9506-BA01B3D63516",
+    "name": "Chappell Roan",
+    "popularity": 0.994
+   },
+   "played": 19,
+   "notGeocoded": [],
+   "app": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Seattle ✓",
+    "Boston ✓",
+    "Austin ✓",
+    "Portland ✓",
+    "San Francisco ✓",
+    "Columbus ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Seattle ✓",
+    "Boston ✓",
+    "Austin ✓",
+    "Portland ✓",
+    "San Francisco ✓",
+    "Columbus ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Nav",
+   "tour": "Never Sleep Tour",
+   "qloo": {
+    "id": "260B2022-E022-488C-B99C-D22E7D58A7A2",
+    "name": "NAV",
+    "popularity": 0.982
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "San Diego ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "San Diego ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Rod Wave",
+   "tour": "Nostalgia Tour",
+   "qloo": {
+    "id": "12C317C7-1B8C-4479-8AD3-C66D4F36799C",
+    "name": "Rod Wave",
+    "popularity": 0.931
+   },
+   "played": 34,
+   "notGeocoded": [],
+   "app": [
+    "Houston ✓",
+    "Jacksonville ✓",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Charlotte ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Los Angeles ✓"
+   ],
+   "blend": [
+    "Houston ✓",
+    "Jacksonville ✓",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Charlotte ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Los Angeles ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Kesha",
+   "tour": "Only Love Tour",
+   "qloo": {
+    "id": "050B64E0-FB7A-49CD-B14C-D7514C267121",
+    "name": "Kesha",
+    "popularity": 0.603
+   },
+   "played": 23,
+   "notGeocoded": [],
+   "app": [
+    "San Diego",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "Albuquerque"
+   ],
+   "blend": [
+    "San Diego",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "Albuquerque"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Joji",
+   "skipped": "no heatmap cells"
+  },
+  {
+   "artist": "Aerosmith",
+   "tour": "Peace Out: The Farewell Tour",
+   "qloo": {
+    "id": "8607C318-EF09-4D7A-B48E-3D4BBE45A968",
+    "name": "Aerosmith",
+    "popularity": 1
+   },
+   "played": 39,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "San Antonio ✓",
+    "Boston ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "San Antonio ✓",
+    "Boston ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Pentatonix",
+   "tour": "Pentatonix: The World Tour",
+   "qloo": {
+    "id": "5594E8A8-3187-4370-B5DE-88A6C16C7686",
+    "name": "Pentatonix",
+    "popularity": 0.994
+   },
+   "played": 56,
+   "notGeocoded": [
+    "Bethel, New York",
+    "Canfield, Ohio",
+    "Gilford, New Hampshire",
+    "Holmdel Township, New Jersey",
+    "Orange Beach, Alabama",
+    "Stateline, Nevada",
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Seattle ✓",
+    "Columbus ✓",
+    "Indianapolis ✓",
+    "Boston",
+    "San Diego",
+    "Washington ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Seattle ✓",
+    "Columbus ✓",
+    "Indianapolis ✓",
+    "Boston",
+    "San Diego",
+    "Washington ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Shania Twain",
+   "tour": "Queen of Me Tour",
+   "qloo": {
+    "id": "825F5A84-8C82-4915-ABEE-37729AEB430C",
+    "name": "Shania Twain",
+    "popularity": 0.996
+   },
+   "played": 41,
+   "notGeocoded": [
+    "Bethel, New York"
+   ],
+   "app": [
+    "Phoenix ✓",
+    "Austin ✓",
+    "Nashville ✓",
+    "Seattle ✓",
+    "San Diego",
+    "Las Vegas",
+    "Boston ✓",
+    "New York City ✓"
+   ],
+   "blend": [
+    "Phoenix ✓",
+    "Austin ✓",
+    "Nashville ✓",
+    "Seattle ✓",
+    "San Diego",
+    "Las Vegas",
+    "Boston ✓",
+    "New York City ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Twice",
+   "tour": "Ready to Be World Tour",
+   "qloo": {
+    "id": "E404DC51-323B-4DB4-ABD3-0A9F02C0429E",
+    "name": "TWICE",
+    "popularity": 0.994
+   },
+   "played": 9,
+   "notGeocoded": [],
+   "app": [
+    "Houston ✓",
+    "New York City ✓",
+    "Dallas ✓",
+    "San Diego",
+    "San Antonio",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "El Paso"
+   ],
+   "blend": [
+    "Houston ✓",
+    "New York City ✓",
+    "Dallas ✓",
+    "San Diego",
+    "San Antonio",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "El Paso"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Beyoncé",
+   "tour": "Renaissance World Tour",
+   "qloo": {
+    "id": "F6754C46-B3E7-457F-8B7E-06C613597320",
+    "name": "Beyoncé",
+    "popularity": 1
+   },
+   "played": 23,
+   "notGeocoded": [],
+   "app": [
+    "Chicago ✓",
+    "New York City ✓",
+    "San Jose ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Boston ✓",
+    "San Antonio",
+    "Los Angeles ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "New York City ✓",
+    "San Jose ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Boston ✓",
+    "San Antonio",
+    "Los Angeles ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Rauw Alejandro",
+   "tour": "Saturno World Tour",
+   "qloo": {
+    "id": "77A93A61-4A62-4466-B031-B9CC7485AA56",
+    "name": "Rauw Alejandro",
+    "popularity": 0.967
+   },
+   "played": 24,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Antonio",
+    "San Diego ✓",
+    "El Paso ✓",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Antonio",
+    "San Diego ✓",
+    "El Paso ✓",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Doja Cat",
+   "tour": "The Scarlet Tour",
+   "qloo": {
+    "id": "AED4373C-DFD5-425D-9BD7-FFD1EEE9805B",
+    "name": "Doja Cat",
+    "popularity": 0.998
+   },
+   "played": 26,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Antonio",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Seattle",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Antonio",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Seattle",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "SZA",
+   "tour": "SOS Tour",
+   "qloo": {
+    "id": "E2E58680-EE3F-4D1D-88B6-B79F87205B2C",
+    "name": "SZA",
+    "popularity": 0.997
+   },
+   "played": 30,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "Washington ✓",
+    "San Francisco ✓",
+    "Houston ✓",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "Washington ✓",
+    "San Francisco ✓",
+    "Houston ✓",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "RBD",
+   "tour": "Soy Rebelde Tour",
+   "qloo": {
+    "id": "D6D04DF7-3868-49F0-BB64-284A068B2B2C",
+    "name": "RBD",
+    "popularity": 0.993
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Diego ✓",
+    "San Antonio",
+    "Chicago ✓",
+    "Dallas ✓",
+    "El Paso ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Diego ✓",
+    "San Antonio",
+    "Chicago ✓",
+    "Dallas ✓",
+    "El Paso ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Tenacious D",
+   "tour": "The Spicy Meatball Tour",
+   "qloo": {
+    "id": "16EAA31B-3C2B-4F76-A337-E6E9D7D286E0",
+    "name": "Tenacious D",
+    "popularity": 0.999
+   },
+   "played": 13,
+   "notGeocoded": [
+    "St. Augustine, Florida"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago",
+    "New York City",
+    "Seattle",
+    "Austin ✓",
+    "San Francisco",
+    "Denver"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago",
+    "New York City",
+    "Seattle",
+    "Austin ✓",
+    "San Francisco",
+    "Denver"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Bruce Springsteen",
+   "tour": "Springsteen and E Street Band 2023–2025 Tour",
+   "qloo": {
+    "id": "120E288E-858F-4AC1-A825-736D5A16D65F",
+    "name": "Bruce Springsteen",
+    "popularity": 0.999
+   },
+   "played": 40,
+   "notGeocoded": [
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Boston ✓",
+    "Washington ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Boston ✓",
+    "Washington ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "The 1975",
+   "tour": "Still... At Their Very Best",
+   "qloo": {
+    "id": "C977220F-11A7-4F93-8714-AEDC57674191",
+    "name": "The 1975",
+    "popularity": 0.998
+   },
+   "played": 35,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Columbus ✓",
+    "San Francisco",
+    "Austin ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Columbus ✓",
+    "San Francisco",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Pink",
+   "tour": "Summer Carnival (tour)",
+   "qloo": {
+    "id": "E44E2F12-1947-4556-B608-6A3A9347B408",
+    "name": "Pink",
+    "popularity": 0.998
+   },
+   "played": 30,
+   "notGeocoded": [
+    "Hershey, Pennsylvania"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Washington ✓",
+    "San Francisco"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Washington ✓",
+    "San Francisco"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Aespa",
+   "tour": "Synk: Hyper Line",
+   "qloo": {
+    "id": "2E3125E5-15B0-4E86-8E91-879F5D453D5B",
+    "name": "aespa",
+    "popularity": 0.99
+   },
+   "played": 8,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Houston",
+    "San Jose",
+    "San Antonio",
+    "Seattle"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Houston",
+    "San Jose",
+    "San Antonio",
+    "Seattle"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Pink",
+   "tour": "Trustfall Tour",
+   "qloo": {
+    "id": "E44E2F12-1947-4556-B608-6A3A9347B408",
+    "name": "Pink",
+    "popularity": 0.998
+   },
+   "played": 22,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago",
+    "San Diego",
+    "Philadelphia",
+    "Phoenix",
+    "Washington",
+    "San Francisco ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago",
+    "San Diego",
+    "Philadelphia",
+    "Phoenix",
+    "Washington",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Tim Minchin",
+   "tour": "An Unfunny Evening with Tim Minchin and His Piano",
+   "qloo": {
+    "id": "6B664B06-2131-4586-AEDC-5CB65767FD6E",
+    "name": "Tim Minchin",
+    "popularity": 0.978
+   },
+   "played": 10,
+   "notGeocoded": [
+    "Minnesota"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Philadelphia",
+    "San Diego",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Philadelphia",
+    "San Diego",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Blink-182",
+   "tour": "World Tour 2023/2024",
+   "qloo": {
+    "id": "D1AA6C1F-F7E4-4A9F-96A3-6A088BA2587A",
+    "name": "blink-182",
+    "popularity": 1
+   },
+   "played": 29,
+   "notGeocoded": [
+    "Hershey, Pennsylvania"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "Phoenix ✓",
+    "Chicago ✓",
+    "Denver ✓",
+    "Boston ✓",
+    "Albuquerque"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "Phoenix ✓",
+    "Chicago ✓",
+    "Denver ✓",
+    "Boston ✓",
+    "Albuquerque"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Nessa Barrett",
+   "tour": "Young Forever Tour",
+   "qloo": {
+    "id": "263999F7-DF99-41B2-8EFA-F0C7C0BE8D26",
+    "name": "Nessa Barrett",
+    "popularity": 0.948
+   },
+   "played": 14,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "Los Angeles ✓",
+    "Charlotte",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Houston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "Los Angeles ✓",
+    "Charlotte",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Houston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Till Lindemann",
+   "tour": "Zunge Tour",
+   "qloo": {
+    "id": "CCA5E887-074F-4B3D-A92A-32BC4DBC7149",
+    "name": "Till Lindemann",
+    "popularity": 0.746
+   },
+   "played": 13,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco",
+    "Philadelphia",
+    "Las Vegas",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco",
+    "Philadelphia",
+    "Las Vegas",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "21 Savage",
+   "tour": "American Dream Tour",
+   "qloo": {
+    "id": "3D8CC570-78AB-4989-AC0E-34FD09E39601",
+    "name": "21 Savage",
+    "popularity": 0.993
+   },
+   "played": 26,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "Jacksonville",
+    "Charlotte ✓",
+    "Philadelphia ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "Jacksonville",
+    "Charlotte ✓",
+    "Philadelphia ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Mon Laferte",
+   "tour": "Autopoiética Tour",
+   "qloo": {
+    "id": "85185E8B-ABB8-4602-B156-3F5AC935221A",
+    "name": "Mon Laferte",
+    "popularity": 0.957
+   },
+   "played": 16,
+   "notGeocoded": [
+    "Lake Buena Vista"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "San Antonio",
+    "Houston ✓",
+    "Chicago",
+    "El Paso ✓",
+    "San Jose"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "San Antonio",
+    "Houston ✓",
+    "Chicago",
+    "El Paso ✓",
+    "San Jose"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Don Omar",
+   "skipped": "needs_input: Qloo has no exact match for \"Don Omar\"."
+  },
+  {
+   "artist": "Niki",
+   "tour": "Buzz World Tour",
+   "qloo": {
+    "id": "B158A517-8D54-45F3-B694-6CF8AC0F9E6E",
+    "name": "Niki",
+    "popularity": 0.966
+   },
+   "played": 19,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Jose",
+    "San Diego ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Seattle ✓",
+    "Philadelphia ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Jose",
+    "San Diego ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Seattle ✓",
+    "Philadelphia ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "PinkPantheress",
+   "tour": "Capable of Love Tour",
+   "qloo": {
+    "id": "7C9617C7-1FA1-4F83-8FDE-2EC2148339C3",
+    "name": "pinkpantheress",
+    "popularity": 0.989
+   },
+   "played": 9,
+   "notGeocoded": [
+    "New York"
+   ],
+   "app": [
+    "New York City",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Philadelphia",
+    "San Francisco",
+    "Washington",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Philadelphia",
+    "San Francisco",
+    "Washington",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Aventura",
+   "tour": "Cerrando Ciclos",
+   "qloo": {
+    "id": "4E0C3846-41D5-4415-837E-6E11B611E7AC",
+    "name": "Aventura",
+    "popularity": 0.99
+   },
+   "played": 36,
+   "notGeocoded": [
+    "Hidalgo County, Texas",
+    "New Jersey"
+   ],
+   "app": [
+    "New York City ✓",
+    "Houston ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Antonio ✓",
+    "Dallas ✓",
+    "Philadelphia",
+    "San Diego"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Houston ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Antonio ✓",
+    "Dallas ✓",
+    "Philadelphia",
+    "San Diego"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Clairo",
+   "tour": "Charm Tour",
+   "qloo": {
+    "id": "9B2140E4-8DEB-452C-BB75-C3B7B6AD198E",
+    "name": "Clairo",
+    "popularity": 0.995
+   },
+   "played": 20,
+   "notGeocoded": [
+    "Stanford, California"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "San Francisco",
+    "San Antonio",
+    "Seattle ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "San Francisco",
+    "San Antonio",
+    "Seattle ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Twenty One Pilots",
+   "tour": "The Clancy World Tour",
+   "qloo": {
+    "id": "0C9D24CF-61C6-4C91-B6E6-91827467A166",
+    "name": "Twenty One Pilots",
+    "popularity": 0.998
+   },
+   "played": 46,
+   "notGeocoded": [
+    "Hershey, Pennsylvania",
+    "Orange Beach, Alabama"
+   ],
+   "app": [
+    "Chicago ✓",
+    "Columbus ✓",
+    "Denver ✓",
+    "New York City ✓",
+    "Indianapolis ✓",
+    "Phoenix ✓",
+    "Seattle ✓",
+    "San Diego ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "Columbus ✓",
+    "Denver ✓",
+    "New York City ✓",
+    "Indianapolis ✓",
+    "Phoenix ✓",
+    "Seattle ✓",
+    "San Diego ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Stephen Sanchez",
+   "tour": "The Connie Co Show Tour",
+   "qloo": {
+    "id": "6B6789F2-1059-4A11-BEDA-A9B66C103538",
+    "name": "Stephen Sanchez",
+    "popularity": 0.871
+   },
+   "played": 30,
+   "notGeocoded": [
+    "Carnation, Washington",
+    "Chautauqua, New York",
+    "St. Augustine, Florida",
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco",
+    "Phoenix ✓",
+    "Nashville ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco",
+    "Phoenix ✓",
+    "Nashville ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Kehlani",
+   "tour": "Crash World Tour",
+   "qloo": {
+    "id": "A7D52423-A169-4EDA-89B0-C62E29DF8AB4",
+    "name": "Kehlani",
+    "popularity": 0.989
+   },
+   "played": 31,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Houston ✓",
+    "San Antonio"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Houston ✓",
+    "San Antonio"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Pearl Jam",
+   "tour": "Dark Matter World Tour",
+   "qloo": {
+    "id": "6DE25E22-8933-4BC0-B0C3-89D060C034AF",
+    "name": "Pearl Jam",
+    "popularity": 1
+   },
+   "played": 19,
+   "notGeocoded": [
+    "Napa Valley AVA"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "San Francisco",
+    "Austin"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "San Francisco",
+    "Austin"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Kacey Musgraves",
+   "tour": "Deeper Well World Tour",
+   "qloo": {
+    "id": "9AAE0224-F8E2-447A-BD05-26D2A9E72573",
+    "name": "Kacey Musgraves",
+    "popularity": 0.993
+   },
+   "played": 27,
+   "notGeocoded": [],
+   "app": [
+    "San Antonio",
+    "Austin ✓",
+    "Fort Worth ✓",
+    "Nashville ✓",
+    "Denver ✓",
+    "Oklahoma City",
+    "Seattle ✓",
+    "Portland"
+   ],
+   "blend": [
+    "San Antonio",
+    "Austin ✓",
+    "Fort Worth ✓",
+    "Nashville ✓",
+    "Denver ✓",
+    "Oklahoma City",
+    "Seattle ✓",
+    "Portland"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Girl in Red",
+   "tour": "Doing It Again Tour",
+   "qloo": {
+    "id": "716A6B01-D1C4-4991-91A8-0204D65225EB",
+    "name": "Girl In Red",
+    "popularity": 0.991
+   },
+   "played": 15,
+   "notGeocoded": [
+    "Del Mar, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "San Diego",
+    "San Francisco ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "San Diego",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Stray Kids",
+   "tour": "Dominate World Tour",
+   "qloo": {
+    "id": "C47948A8-9DE8-4214-B66D-6962B54533FD",
+    "name": "STRAY KIDS",
+    "popularity": 0.988
+   },
+   "played": 9,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston",
+    "Chicago ✓",
+    "San Antonio",
+    "San Diego",
+    "Fort Worth ✓",
+    "San Francisco ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston",
+    "Chicago ✓",
+    "San Antonio",
+    "San Diego",
+    "Fort Worth ✓",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Peso Pluma",
+   "tour": "Éxodo Tour",
+   "qloo": {
+    "id": "CC64E9A6-0432-47EA-9877-071FF8F413C4",
+    "name": "Peso Pluma",
+    "popularity": 0.222
+   },
+   "played": 30,
+   "notGeocoded": [
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "Houston ✓",
+    "San Jose ✓",
+    "El Paso",
+    "Dallas ✓",
+    "San Antonio ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "Houston ✓",
+    "San Jose ✓",
+    "El Paso",
+    "Dallas ✓",
+    "San Antonio ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "You Me at Six",
+   "tour": "Final Nights of Six",
+   "qloo": {
+    "id": "9AB8BD57-2279-44C1-8765-83488F7EA48D",
+    "name": "You Me at Six",
+    "popularity": 0.997
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Phoenix",
+    "San Francisco ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Phoenix",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Justin Timberlake",
+   "skipped": "needs_input: Qloo has no exact match for \"Justin Timberlake\"."
+  },
+  {
+   "artist": "Conan Gray",
+   "tour": "Found Heaven On Tour",
+   "qloo": {
+    "id": "97A06C30-99BE-47A8-BD7E-D6DDD4504137",
+    "name": "Conan Gray",
+    "popularity": 0.991
+   },
+   "played": 19,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Antonio",
+    "Seattle ✓",
+    "Austin ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Antonio",
+    "Seattle ✓",
+    "Austin ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Linkin Park",
+   "tour": "From Zero World Tour",
+   "qloo": {
+    "id": "ABB725B5-B689-431B-A90F-A06FF9313F0F",
+    "name": "Linkin Park",
+    "popularity": 1
+   },
+   "played": 30,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego",
+    "San Jose ✓",
+    "Phoenix ✓",
+    "San Antonio",
+    "Chicago ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego",
+    "San Jose ✓",
+    "Phoenix ✓",
+    "San Antonio",
+    "Chicago ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Cyndi Lauper",
+   "tour": "Girls Just Wanna Have Fun Farewell Tour",
+   "qloo": {
+    "id": "F2A2D019-B98F-4E41-8070-17D42DD4783B",
+    "name": "Cyndi Lauper",
+    "popularity": 0.998
+   },
+   "played": 39,
+   "notGeocoded": [
+    "Bethel, New York",
+    "Bonner Springs, Kansas",
+    "Independence Township, Michigan"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Omar Apollo",
+   "tour": "God Said No World Tour",
+   "qloo": {
+    "id": "40E072EE-DAEE-435B-83A4-0B7085066E94",
+    "name": "omar apollo",
+    "popularity": 0.977
+   },
+   "played": 25,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "San Antonio",
+    "Austin ✓",
+    "Houston ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "San Antonio",
+    "Austin ✓",
+    "Houston ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Avril Lavigne",
+   "tour": "Greatest Hits Tour (Avril Lavigne)",
+   "qloo": {
+    "id": "A8A77393-4BF2-4389-971D-8F0089C6F603",
+    "name": "Avril Lavigne",
+    "popularity": 1
+   },
+   "played": 35,
+   "notGeocoded": [
+    "Bethel, New York",
+    "Hershey, Pennsylvania",
+    "Holmdel Township, New Jersey"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Seattle ✓",
+    "Boston ✓",
+    "San Francisco ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Seattle ✓",
+    "Boston ✓",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Luke Combs",
+   "tour": "Growin' Up and Gettin' Old Tour",
+   "qloo": {
+    "id": "3CBD78B1-D2F2-4551-A342-4621B6BDB5E2",
+    "name": "Luke Combs",
+    "popularity": 0.971
+   },
+   "played": 13,
+   "notGeocoded": [],
+   "app": [
+    "Charlotte",
+    "Nashville",
+    "Columbus",
+    "Phoenix ✓",
+    "Indianapolis",
+    "Fort Worth",
+    "Jacksonville ✓",
+    "Louisville"
+   ],
+   "blend": [
+    "Charlotte",
+    "Nashville",
+    "Columbus",
+    "Phoenix ✓",
+    "Indianapolis",
+    "Fort Worth",
+    "Jacksonville ✓",
+    "Louisville"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Olivia Rodrigo",
+   "tour": "Guts World Tour",
+   "qloo": {
+    "id": "087EF30C-3367-49B8-AC58-8B8C01D69DB6",
+    "name": "Olivia Rodrigo",
+    "popularity": 0.997
+   },
+   "played": 31,
+   "notGeocoded": [
+    "Thousand Palms, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Boston ✓",
+    "Phoenix ✓",
+    "Austin ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Boston ✓",
+    "Phoenix ✓",
+    "Austin ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Billie Eilish",
+   "tour": "Hit Me Hard and Soft: The Tour",
+   "qloo": {
+    "id": "D7BCE4CD-5135-4608-8A7D-78E08FFD52F3",
+    "name": "Billie Eilish",
+    "popularity": 0.999
+   },
+   "played": 30,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego",
+    "Seattle ✓",
+    "Austin ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego",
+    "Seattle ✓",
+    "Austin ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Megan Thee Stallion",
+   "tour": "Hot Girl Summer Tour",
+   "qloo": {
+    "id": "F26A0B99-4280-40E9-B6AE-B9AAA6028431",
+    "name": "Megan Thee Stallion",
+    "popularity": 0.993
+   },
+   "played": 25,
+   "notGeocoded": [],
+   "app": [
+    "Houston ✓",
+    "Jacksonville",
+    "Dallas ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Detroit ✓"
+   ],
+   "blend": [
+    "Houston ✓",
+    "Jacksonville",
+    "Dallas ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Detroit ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Rod Wave",
+   "tour": "Last Lap Tour",
+   "qloo": {
+    "id": "12C317C7-1B8C-4479-8AD3-C66D4F36799C",
+    "name": "Rod Wave",
+    "popularity": 0.931
+   },
+   "played": 26,
+   "notGeocoded": [],
+   "app": [
+    "Houston ✓",
+    "Jacksonville ✓",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Charlotte ✓",
+    "Chicago ✓",
+    "New York City",
+    "Los Angeles"
+   ],
+   "blend": [
+    "Houston ✓",
+    "Jacksonville ✓",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Charlotte ✓",
+    "Chicago ✓",
+    "New York City",
+    "Los Angeles"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Imagine Dragons",
+   "tour": "Loom World Tour",
+   "qloo": {
+    "id": "13087295-1C74-4EA7-8D1B-9C3A87A6A1E4",
+    "name": "Imagine Dragons",
+    "popularity": 1
+   },
+   "played": 28,
+   "notGeocoded": [
+    "George, Washington",
+    "Ridgedale, Missouri",
+    "Snowmass, Colorado"
+   ],
+   "app": [
+    "New York City ✓",
+    "San Diego ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Seattle",
+    "San Francisco ✓",
+    "Las Vegas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "San Diego ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Seattle",
+    "San Francisco ✓",
+    "Las Vegas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Chase Atlantic",
+   "tour": "Lost in Heaven Tour",
+   "qloo": {
+    "id": "33DA3B26-2502-4C39-BB51-A9BD4EF9A39F",
+    "name": "Chase Atlantic",
+    "popularity": 0.98
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "Houston ✓",
+    "Columbus"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "Houston ✓",
+    "Columbus"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "New Kids on the Block, Paula Abdul & DJ Jazzy Jeff",
+   "skipped": "needs_input: Qloo has no exact match for \"New Kids on the Block, Paula Abdul & DJ Jazzy Jeff\"."
+  },
+  {
+   "artist": "Mariah Carey",
+   "tour": "Mariah Carey's Christmas Time",
+   "qloo": {
+    "id": "CDB8A65C-3BF0-47BF-A336-2CFC70417D7F",
+    "name": "Mariah Carey",
+    "popularity": 0.999
+   },
+   "played": 18,
+   "notGeocoded": [
+    "Thousand Palms, California"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago",
+    "San Diego",
+    "San Francisco",
+    "San Antonio",
+    "Phoenix ✓",
+    "Las Vegas ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago",
+    "San Diego",
+    "San Francisco",
+    "San Antonio",
+    "Phoenix ✓",
+    "Las Vegas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Tinashe",
+   "tour": "Match My Freak: World Tour",
+   "qloo": {
+    "id": "2B87E4AE-F53A-49D1-851E-711F584ABA27",
+    "name": "Tinashe",
+    "popularity": 0.994
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Philadelphia",
+    "Houston ✓",
+    "Washington ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Philadelphia",
+    "Houston ✓",
+    "Washington ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Bad Bunny",
+   "tour": "Most Wanted Tour (Bad Bunny)",
+   "qloo": {
+    "id": "BDA1B73F-10E7-4D09-AC51-B796CCEC5FF3",
+    "name": "Bad Bunny",
+    "popularity": 0.994
+   },
+   "played": 29,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio",
+    "San Diego",
+    "Houston ✓",
+    "Chicago ✓",
+    "El Paso",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio",
+    "San Diego",
+    "Houston ✓",
+    "Chicago ✓",
+    "El Paso",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Cage the Elephant",
+   "tour": "Neon Pill Tour",
+   "qloo": {
+    "id": "F6BBDF90-222E-43F4-A1F8-1F20CD7A2742",
+    "name": "Cage the Elephant",
+    "popularity": 0.999
+   },
+   "played": 38,
+   "notGeocoded": [
+    "Gilford, New Hampshire",
+    "Holmdel Township, New Jersey",
+    "Ocean City, Maryland"
+   ],
+   "app": [
+    "Chicago ✓",
+    "San Diego ✓",
+    "Austin ✓",
+    "Nashville",
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Columbus",
+    "Denver ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "San Diego ✓",
+    "Austin ✓",
+    "Nashville",
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Columbus",
+    "Denver ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Childish Gambino",
+   "tour": "The New World Tour (Childish Gambino)",
+   "qloo": {
+    "id": "C040E149-2449-4BBE-98BF-2FAF1584D19F",
+    "name": "Childish Gambino",
+    "popularity": 0.999
+   },
+   "played": 28,
+   "notGeocoded": [],
+   "app": [
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "San Diego"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "San Diego"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Lizzy McAlpine",
+   "tour": "The Older Tour",
+   "qloo": {
+    "id": "3662851D-81E9-4D42-941F-486B87B101CA",
+    "name": "Lizzy McAlpine",
+    "popularity": 0.963
+   },
+   "played": 14,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Nashville",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Boston ✓",
+    "Nashville"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Marilyn Manson",
+   "tour": "One Assassination Under God Tour",
+   "qloo": {
+    "id": "76B8BAA3-ADF7-4D2D-B6DF-54C641A2C4FD",
+    "name": "Marilyn Manson",
+    "popularity": 1
+   },
+   "played": 81,
+   "notGeocoded": [
+    "Airway Heights, Washington",
+    "Cadott, Wisconsin",
+    "Hershey, Pennsylvania",
+    "Holmdel Township, New Jersey",
+    "Pryor Creek, Oklahoma",
+    "Sturgis, South Dakota"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "El Paso",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Antonio ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "El Paso",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Antonio ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Blink-182",
+   "tour": "One More Time Tour",
+   "qloo": {
+    "id": "D1AA6C1F-F7E4-4A9F-96A3-6A088BA2587A",
+    "name": "blink-182",
+    "popularity": 1
+   },
+   "played": 29,
+   "notGeocoded": [
+    "Ocean City, Maryland"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "Phoenix ✓",
+    "Chicago ✓",
+    "Denver ✓",
+    "Boston ✓",
+    "Albuquerque"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "Phoenix ✓",
+    "Chicago ✓",
+    "Denver ✓",
+    "Boston ✓",
+    "Albuquerque"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Jeff Lynne's ELO",
+   "tour": "The Over and Out Tour",
+   "qloo": {
+    "id": "83FBEB79-5194-4429-9096-2FE388184126",
+    "name": "Jeff Lynne's ELO",
+    "popularity": 0.725
+   },
+   "played": 25,
+   "notGeocoded": [],
+   "app": [
+    "Fort Worth ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Boston ✓",
+    "New York City ✓",
+    "Nashville ✓",
+    "San Francisco ✓",
+    "Indianapolis ✓"
+   ],
+   "blend": [
+    "Fort Worth ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Boston ✓",
+    "New York City ✓",
+    "Nashville ✓",
+    "San Francisco ✓",
+    "Indianapolis ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Sam Fender",
+   "tour": "People Watching Tour",
+   "qloo": {
+    "id": "0B6B579F-9681-49DC-A390-44AA4BAF08A2",
+    "name": "Sam Fender",
+    "popularity": 0.98
+   },
+   "played": 13,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Austin",
+    "Philadelphia ✓",
+    "San Diego",
+    "Nashville ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Austin",
+    "Philadelphia ✓",
+    "San Diego",
+    "Nashville ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Nicki Minaj",
+   "tour": "Pink Friday 2 World Tour",
+   "qloo": {
+    "id": "7AEC8912-DB9F-43D6-ADE1-AB99AC138E26",
+    "name": "Nicki Minaj",
+    "popularity": 0.999
+   },
+   "played": 46,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Los Angeles ✓",
+    "Dallas ✓",
+    "Jacksonville ✓",
+    "Washington ✓",
+    "San Antonio ✓",
+    "Houston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Los Angeles ✓",
+    "Dallas ✓",
+    "Jacksonville ✓",
+    "Washington ✓",
+    "San Antonio ✓",
+    "Houston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Falling in Reverse",
+   "tour": "Popular MonsTOUR II: World Domination",
+   "qloo": {
+    "id": "8B46F1FD-9657-4644-B4A7-C75F15EE130A",
+    "name": "Falling in Reverse",
+    "popularity": 0.994
+   },
+   "played": 24,
+   "notGeocoded": [
+    "Airway Heights",
+    "Holmdel Township, New Jersey"
+   ],
+   "app": [
+    "San Antonio",
+    "Phoenix ✓",
+    "Columbus",
+    "San Diego",
+    "Philadelphia",
+    "New York City",
+    "Las Vegas",
+    "Chicago ✓"
+   ],
+   "blend": [
+    "San Antonio",
+    "Phoenix ✓",
+    "Columbus",
+    "San Diego",
+    "Philadelphia",
+    "New York City",
+    "Las Vegas",
+    "Chicago ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "AC/DC",
+   "tour": "Power Up Tour",
+   "qloo": {
+    "id": "4C4C1DF8-36F0-4210-B4E8-8CF966A93262",
+    "name": "AC/DC",
+    "popularity": 0.996
+   },
+   "played": 25,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "El Paso",
+    "San Antonio ✓",
+    "Phoenix",
+    "Las Vegas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "El Paso",
+    "San Antonio ✓",
+    "Phoenix",
+    "Las Vegas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Don Toliver",
+   "tour": "Psycho Tour (Don Toliver)",
+   "qloo": {
+    "id": "C3A3AF26-9F87-4668-9ECA-3F0947DC6965",
+    "name": "Don Toliver",
+    "popularity": 0.984
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "San Antonio",
+    "Philadelphia ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "San Antonio",
+    "Philadelphia ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Dua Lipa",
+   "tour": "Radical Optimism Tour",
+   "qloo": {
+    "id": "1D792A35-7D72-4D57-88D0-C3A4F3E73EF6",
+    "name": "Dua Lipa",
+    "popularity": 0.998
+   },
+   "played": 9,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "El Paso",
+    "San Antonio",
+    "Austin"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "El Paso",
+    "San Antonio",
+    "Austin"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Anuel AA",
+   "tour": "Real Hasta la Muerte 2 Tour",
+   "qloo": {
+    "id": "EEDD417B-0E48-446D-AD4D-157564D4CAF1",
+    "name": "Anuel AA",
+    "popularity": 0.957
+   },
+   "played": 23,
+   "notGeocoded": [
+    "Hidalgo, Texas",
+    "Uncasville"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Antonio",
+    "Chicago ✓",
+    "San Diego",
+    "El Paso",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "San Antonio",
+    "Chicago ✓",
+    "San Diego",
+    "El Paso",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Green Day",
+   "tour": "The Saviors Tour",
+   "qloo": {
+    "id": "76922890-5BBA-42BB-B3F9-1AF72114CF44",
+    "name": "Green Day",
+    "popularity": 1
+   },
+   "played": 29,
+   "notGeocoded": [
+    "Bonner Springs, Kansas",
+    "Hershey, Pennsylvania",
+    "Ocean City, Maryland"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "San Jose",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "San Jose",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Thirty Seconds to Mars",
+   "tour": "Seasons Tour",
+   "qloo": {
+    "id": "785D8969-095E-4820-B6D5-2B6804D747CB",
+    "name": "Thirty Seconds to Mars",
+    "popularity": 0.715
+   },
+   "played": 23,
+   "notGeocoded": [
+    "Waite Park, Minnesota"
+   ],
+   "app": [
+    "San Diego",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "San Jose ✓",
+    "Philadelphia ✓",
+    "Albuquerque"
+   ],
+   "blend": [
+    "San Diego",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "San Jose ✓",
+    "Philadelphia ✓",
+    "Albuquerque"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Gracie Abrams",
+   "tour": "The Secret of Us Tour",
+   "qloo": {
+    "id": "A01C72F0-9819-4732-B5CD-A22BF9ADB98A",
+    "name": "Gracie Abrams",
+    "popularity": 0.981
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Sexyy Red",
+   "tour": "Sexyy Red 4 President Tour",
+   "qloo": {
+    "id": "1D2CE7C9-BE61-4EB0-87D8-95AE6B87E386",
+    "name": "Sexyy Red",
+    "popularity": 0.884
+   },
+   "played": 17,
+   "notGeocoded": [
+    "Bonner Springs"
+   ],
+   "app": [
+    "Dallas ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "Washington",
+    "Charlotte",
+    "New York City ✓",
+    "Jacksonville",
+    "Chicago"
+   ],
+   "blend": [
+    "Dallas ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "Washington",
+    "Charlotte",
+    "New York City ✓",
+    "Jacksonville",
+    "Chicago"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Sabrina Carpenter",
+   "tour": "Short n' Sweet Tour",
+   "qloo": {
+    "id": "F5453A45-593C-41EC-BD5A-453D1AEC565C",
+    "name": "Sabrina Carpenter",
+    "popularity": 0.996
+   },
+   "played": 31,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Antonio",
+    "Phoenix ✓",
+    "El Paso",
+    "Austin ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Antonio",
+    "Phoenix ✓",
+    "El Paso",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Niall Horan",
+   "tour": "The Show: Live on Tour",
+   "qloo": {
+    "id": "746E086E-5132-42EB-A54D-79FFF7AD8737",
+    "name": "Niall Horan",
+    "popularity": 0.987
+   },
+   "played": 33,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Madison Beer",
+   "tour": "The Spinnin Tour",
+   "qloo": {
+    "id": "F65367A8-934D-4434-B3A3-A223CDB90C83",
+    "name": "Madison Beer",
+    "popularity": 0.988
+   },
+   "played": 29,
+   "notGeocoded": [
+    "McKees Rocks, Pennsylvania"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Boston ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Boston ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Noah Kahan",
+   "tour": "The Stick Season (We'll All Be Here Forever) Tour",
+   "qloo": {
+    "id": "0A8052C7-2F56-43B5-B133-F59F8F2917E0",
+    "name": "Noah Kahan",
+    "popularity": 0.983
+   },
+   "played": 28,
+   "notGeocoded": [
+    "Bonner Springs, Kansas",
+    "East Troy, Wisconsin",
+    "Essex Junction, Vermont",
+    "George, Washington",
+    "Miramar Beach, Florida",
+    "St. Augustine, Florida"
+   ],
+   "app": [
+    "Chicago",
+    "New York City ✓",
+    "Nashville ✓",
+    "Denver ✓",
+    "Seattle",
+    "Boston ✓",
+    "Columbus",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Chicago",
+    "New York City ✓",
+    "Nashville ✓",
+    "Denver ✓",
+    "Seattle",
+    "Boston ✓",
+    "Columbus",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Latto",
+   "tour": "Sugar Honey Iced Tea Tour",
+   "qloo": {
+    "id": "F79FAA42-33C3-45E7-90B5-280F96557B00",
+    "name": "Latto",
+    "popularity": 0.925
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "Houston ✓",
+    "Dallas ✓",
+    "Jacksonville",
+    "Charlotte",
+    "Chicago ✓",
+    "Memphis",
+    "Philadelphia ✓",
+    "Los Angeles ✓"
+   ],
+   "blend": [
+    "Houston ✓",
+    "Dallas ✓",
+    "Jacksonville",
+    "Charlotte",
+    "Chicago ✓",
+    "Memphis",
+    "Philadelphia ✓",
+    "Los Angeles ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Charli XCX",
+   "tour": "Sweat (concert tour)",
+   "qloo": {
+    "id": "B4A3F0F0-354D-4CAD-9F96-11A20709CB9C",
+    "name": "Charli XCX",
+    "popularity": 0.999
+   },
+   "played": 19,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Austin",
+    "Philadelphia ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Austin",
+    "Philadelphia ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Tate McRae",
+   "tour": "Think Later World Tour",
+   "qloo": {
+    "id": "2D96A87B-3AE9-4950-A892-AE1B9642BB4A",
+    "name": "Tate McRae",
+    "popularity": 0.99
+   },
+   "played": 21,
+   "notGeocoded": [
+    "Holmdel Township, New Jersey",
+    "Uncasville, Connecticut",
+    "Woodinville, Washington"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Meghan Trainor",
+   "tour": "The Timeless Tour",
+   "qloo": {
+    "id": "338EE3D7-168A-4C65-B4A9-FF109C63B178",
+    "name": "Meghan Trainor",
+    "popularity": 0.997
+   },
+   "played": 24,
+   "notGeocoded": [
+    "Uncasville"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Phoenix ✓",
+    "San Diego",
+    "San Antonio",
+    "Boston ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Phoenix ✓",
+    "San Diego",
+    "San Antonio",
+    "Boston ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Sum 41",
+   "tour": "Tour of the Setting Sum",
+   "qloo": {
+    "id": "B557BCED-AA9F-4B39-BEF7-84802C82ED7D",
+    "name": "Sum 41",
+    "popularity": 1
+   },
+   "played": 40,
+   "notGeocoded": [
+    "Moon Township, Pennsylvania"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "San Jose",
+    "Las Vegas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "San Jose",
+    "Las Vegas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Melanie Martinez",
+   "tour": "The Trilogy Tour (Melanie Martinez)",
+   "qloo": {
+    "id": "72A40D3E-829E-40AE-97AA-CD061EAF146A",
+    "name": "Melanie Martinez",
+    "popularity": 0.995
+   },
+   "played": 27,
+   "notGeocoded": [
+    "Hershey, Pennsylvania",
+    "Thousand Palms, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Seattle ✓",
+    "Portland"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Antonio ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Seattle ✓",
+    "Portland"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Usher",
+   "tour": "Usher: Past Present Future",
+   "qloo": {
+    "id": "566AA231-1670-45BC-831F-1B2FD95BF9DE",
+    "name": "Usher",
+    "popularity": 0.999
+   },
+   "played": 22,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Washington ✓",
+    "Las Vegas ✓",
+    "Houston ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Washington ✓",
+    "Las Vegas ✓",
+    "Houston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Weezer",
+   "tour": "Voyage to the Blue Planet",
+   "qloo": {
+    "id": "FC4F7908-E4F0-41DD-8D5E-92928AE42457",
+    "name": "Weezer",
+    "popularity": 1
+   },
+   "played": 21,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "Chicago",
+    "San Diego",
+    "New York City ✓",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "Phoenix",
+    "Boston ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Chicago",
+    "San Diego",
+    "New York City ✓",
+    "Seattle ✓",
+    "Philadelphia ✓",
+    "Phoenix",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Aurora",
+   "tour": "What Happened to the Earth?",
+   "qloo": {
+    "id": "28E5DAA9-7A37-44FD-8D9E-A5ABEB6B6469",
+    "name": "Aurora",
+    "popularity": 0.992
+   },
+   "played": 8,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Houston"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Houston"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "King Gizzard & the Lizard Wizard",
+   "tour": "World Tour 2024",
+   "qloo": {
+    "id": "C95B2953-272C-4076-8F10-749D99B5F833",
+    "name": "King Gizzard & The Lizard Wizard",
+    "popularity": 0.994
+   },
+   "played": 33,
+   "notGeocoded": [
+    "St. Augustine, Florida",
+    "Stanford, California"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City",
+    "Chicago ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Seattle",
+    "Philadelphia ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City",
+    "Chicago ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Seattle",
+    "Philadelphia ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Ice Spice",
+   "tour": "Y2K! World Tour",
+   "qloo": {
+    "id": "CFC5CD3C-8DE2-4C20-B7CF-673798513416",
+    "name": "ICE SPICE",
+    "popularity": 0.951
+   },
+   "played": 16,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Washington ✓",
+    "Charlotte",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Washington ✓",
+    "Charlotte",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Flo",
+   "tour": "Access All Areas Tour (Flo)",
+   "qloo": {
+    "id": "D3AE84B1-C633-4902-A510-6785D10DB16B",
+    "name": "FLO",
+    "popularity": 0.957
+   },
+   "played": 23,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Washington ✓",
+    "Dallas ✓",
+    "Charlotte"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Washington ✓",
+    "Dallas ✓",
+    "Charlotte"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Nessa Barrett",
+   "tour": "Aftercare World Tour",
+   "qloo": {
+    "id": "263999F7-DF99-41B2-8EFA-F0C7C0BE8D26",
+    "name": "Nessa Barrett",
+    "popularity": 0.948
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "Los Angeles ✓",
+    "Charlotte",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Houston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Dallas ✓",
+    "Los Angeles ✓",
+    "Charlotte",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "Houston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Benson Boone",
+   "tour": "American Heart World Tour",
+   "qloo": {
+    "id": "9B3169D3-2D17-4F05-A6ED-1A290035DB57",
+    "name": "Benson Boone",
+    "popularity": 0.976
+   },
+   "played": 28,
+   "notGeocoded": [],
+   "app": [
+    "Phoenix ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Nashville ✓",
+    "Dallas ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "Phoenix ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Nashville ✓",
+    "Dallas ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "PinkPantheress",
+   "tour": "An Evening With... PinkPantheress",
+   "qloo": {
+    "id": "7C9617C7-1FA1-4F83-8FDE-2EC2148339C3",
+    "name": "pinkpantheress",
+    "popularity": 0.989
+   },
+   "played": 17,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Playboi Carti",
+   "tour": "Antagonist Tour",
+   "qloo": {
+    "id": "3F994662-8B75-48F5-9D76-700C723F8719",
+    "name": "Playboi Carti",
+    "popularity": 0.995
+   },
+   "played": 31,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Philadelphia ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Djo",
+   "tour": "Back on You World Tour",
+   "qloo": {
+    "id": "1539AC2F-F7BD-4146-B539-6D6B1B54A7A2",
+    "name": "Djo",
+    "popularity": 0.977
+   },
+   "played": 33,
+   "notGeocoded": [
+    "Del Mar, California"
+   ],
+   "app": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Austin ✓",
+    "Philadelphia ✓",
+    "Nashville ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Austin ✓",
+    "Philadelphia ✓",
+    "Nashville ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Halsey",
+   "tour": "Back to Badlands Tour",
+   "qloo": {
+    "id": "488C7F63-9D38-49A2-9544-51A802B4FE35",
+    "name": "Halsey",
+    "popularity": 0.997
+   },
+   "played": 11,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "San Diego",
+    "Phoenix",
+    "Denver ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Boston ✓",
+    "Seattle"
+   ],
+   "blend": [
+    "New York City ✓",
+    "San Diego",
+    "Phoenix",
+    "Denver ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Boston ✓",
+    "Seattle"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "James Blunt",
+   "tour": "Back to Bedlam 20th Anniversary Tour",
+   "qloo": {
+    "id": "A1165050-9298-4DFC-BB5D-2454749C83AB",
+    "name": "James Blunt",
+    "popularity": 0.999
+   },
+   "played": 8,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego",
+    "Philadelphia ✓",
+    "Washington ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego",
+    "Philadelphia ✓",
+    "Washington ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Katseye",
+   "skipped": "empty: Qloo has no artist called \"Katseye\"."
+  },
+  {
+   "artist": "Post Malone",
+   "tour": "Big Ass Stadium Tour",
+   "qloo": {
+    "id": "ADB51D79-491A-49E7-9A99-E1F739382E9F",
+    "name": "Post Malone",
+    "popularity": 0.998
+   },
+   "played": 41,
+   "notGeocoded": [
+    "Gulf Shores",
+    "Hershey, Pennsylvania",
+    "Panama City Beach",
+    "Ridgedale, Missouri"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "Dallas ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "San Antonio ✓",
+    "Austin ✓",
+    "New York City ✓",
+    "Indianapolis ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Dallas ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "San Antonio ✓",
+    "Austin ✓",
+    "New York City ✓",
+    "Indianapolis ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Reneé Rapp",
+   "tour": "Bite Me Tour (Reneé Rapp)",
+   "qloo": {
+    "id": "CA93EB05-4D2B-471B-800E-6B134AA80B2D",
+    "name": "Reneé Rapp",
+    "popularity": 0.946
+   },
+   "played": 18,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago",
+    "Philadelphia",
+    "Los Angeles ✓",
+    "Charlotte ✓",
+    "Boston ✓",
+    "San Diego ✓",
+    "Washington ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago",
+    "Philadelphia",
+    "Los Angeles ✓",
+    "Charlotte ✓",
+    "Boston ✓",
+    "San Diego ✓",
+    "Washington ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Chris Brown",
+   "tour": "Breezy Bowl XX",
+   "qloo": {
+    "id": "2805522F-D7B7-4646-963A-B3D406997947",
+    "name": "Chris Brown",
+    "popularity": 0.999
+   },
+   "played": 24,
+   "notGeocoded": [
+    "Hershey, Pennsylvania"
+   ],
+   "app": [
+    "Houston ✓",
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Charlotte",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Las Vegas ✓",
+    "Jacksonville"
+   ],
+   "blend": [
+    "Houston ✓",
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Charlotte",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Las Vegas ✓",
+    "Jacksonville"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Central Cee",
+   "tour": "Can't Rush Greatness World Tour",
+   "qloo": {
+    "id": "808A597D-2E87-4D24-A6F5-317E5562B323",
+    "name": "Central Cee",
+    "popularity": 0.953
+   },
+   "played": 15,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Washington ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Dallas ✓",
+    "Washington ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Queens of the Stone Age",
+   "tour": "The Catacombs Tour",
+   "qloo": {
+    "id": "155A5A06-6814-42D2-9633-962CD8385208",
+    "name": "Queens of the Stone Age",
+    "popularity": 1
+   },
+   "played": 14,
+   "notGeocoded": [
+    "Joshua Tree, California"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Seattle ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Seattle ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Tyler, the Creator",
+   "tour": "Chromakopia: The World Tour",
+   "qloo": {
+    "id": "375758AA-B0FA-4508-8EC1-D7FBFE3A4B3C",
+    "name": "Tyler, the Creator",
+    "popularity": 0.999
+   },
+   "played": 35,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Portland ✓",
+    "Philadelphia ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Portland ✓",
+    "Philadelphia ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Rauw Alejandro",
+   "tour": "Cosa Nuestra World Tour",
+   "qloo": {
+    "id": "77A93A61-4A62-4466-B031-B9CC7485AA56",
+    "name": "Rauw Alejandro",
+    "popularity": 0.967
+   },
+   "played": 22,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "San Antonio",
+    "San Diego ✓",
+    "El Paso",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago ✓",
+    "San Antonio",
+    "San Diego ✓",
+    "El Paso",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Tame Impala",
+   "tour": "Deadbeat Tour",
+   "qloo": {
+    "id": "D1AE8792-9129-46E0-AEE7-2C3A81E91385",
+    "name": "Tame Impala",
+    "popularity": 0.999
+   },
+   "played": 23,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "All Time Low",
+   "tour": "Everyone's Talking! The World Tour",
+   "qloo": {
+    "id": "9E815D7C-91F0-44F8-B10B-9A4B6382C74F",
+    "name": "All Time Low",
+    "popularity": 0.999
+   },
+   "played": 30,
+   "notGeocoded": [
+    "Merrionette Park",
+    "Moon, Pennsylvania"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago",
+    "Columbus ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "San Diego",
+    "Boston ✓",
+    "Washington ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago",
+    "Columbus ✓",
+    "Philadelphia ✓",
+    "Phoenix ✓",
+    "San Diego",
+    "Boston ✓",
+    "Washington ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Halsey",
+   "tour": "For My Last Trick: The Tour",
+   "qloo": {
+    "id": "488C7F63-9D38-49A2-9544-51A802B4FE35",
+    "name": "Halsey",
+    "popularity": 0.997
+   },
+   "played": 28,
+   "notGeocoded": [
+    "Uncasville"
+   ],
+   "app": [
+    "New York City ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "Denver ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Boston ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "San Diego",
+    "Phoenix ✓",
+    "Denver ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Boston ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Lucy Dacus",
+   "tour": "Forever Is a Feeling Tour",
+   "qloo": {
+    "id": "99FBEE0C-2A8A-4EE2-9B20-8CEBD854CD46",
+    "name": "Lucy Dacus",
+    "popularity": 0.982
+   },
+   "played": 38,
+   "notGeocoded": [
+    "Carnation, Washington",
+    "Shelburne, Vermont"
+   ],
+   "app": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Austin ✓",
+    "Seattle",
+    "Portland ✓",
+    "Boston ✓",
+    "San Francisco ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Austin ✓",
+    "Seattle",
+    "Portland ✓",
+    "Boston ✓",
+    "San Francisco ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Geese",
+   "tour": "Getting Killed World Tour",
+   "qloo": {
+    "id": "5C0B120A-37A0-4E5B-9350-BA0BB8746EC6",
+    "name": "Geese",
+    "popularity": 0.935
+   },
+   "played": 31,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Los Angeles ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Nashville ✓",
+    "Washington ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Los Angeles ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Nashville ✓",
+    "Washington ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Kendrick Lamar",
+   "tour": "Grand National Tour",
+   "qloo": {
+    "id": "C915A918-39C5-47A3-A101-D9FA1DECBD9C",
+    "name": "Kendrick Lamar",
+    "popularity": 1
+   },
+   "played": 17,
+   "notGeocoded": [
+    "Hershey, Pennsylvania"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Austin"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Austin"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Garbage",
+   "tour": "Happy Endings tour",
+   "qloo": {
+    "id": "B4FC6D5A-BE93-40C4-B3D9-AF809821B615",
+    "name": "Garbage",
+    "popularity": 0.999
+   },
+   "played": 38,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Ado",
+   "tour": "Hibana World Tour",
+   "qloo": {
+    "id": "7FFAA902-0F79-449E-B178-8AAB063FD1D7",
+    "name": "Ado",
+    "popularity": 0.966
+   },
+   "played": 11,
+   "notGeocoded": [],
+   "app": [
+    "Houston",
+    "San Antonio",
+    "Dallas ✓",
+    "Austin",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Jacksonville"
+   ],
+   "blend": [
+    "Houston",
+    "San Antonio",
+    "Dallas ✓",
+    "Austin",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "Jacksonville"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Pierce the Veil",
+   "tour": "I Can't Hear You World Tour",
+   "qloo": {
+    "id": "653BD725-93BF-4488-88F5-26881AFBE1BA",
+    "name": "Pierce The Veil",
+    "popularity": 0.996
+   },
+   "played": 44,
+   "notGeocoded": [],
+   "app": [
+    "San Antonio",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "New York City ✓",
+    "Columbus",
+    "Los Angeles ✓",
+    "Philadelphia ✓"
+   ],
+   "blend": [
+    "San Antonio",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "New York City ✓",
+    "Columbus",
+    "Los Angeles ✓",
+    "Philadelphia ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Haim",
+   "tour": "I Quit Tour",
+   "qloo": {
+    "id": "296A9BFF-AE21-4FC0-9F9D-81EBCFB5BBE6",
+    "name": "HAIM",
+    "popularity": 0.998
+   },
+   "played": 20,
+   "notGeocoded": [
+    "Great Salt Lake"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Seattle ✓",
+    "San Diego ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Seattle ✓",
+    "San Diego ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Noah Cyrus",
+   "tour": "I Want My Loved Ones to Go with Me Tour",
+   "qloo": {
+    "id": "F9D530ED-031B-442C-8870-DFF6951BC4AD",
+    "name": "Noah Cyrus",
+    "popularity": 0.891
+   },
+   "played": 25,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "San Diego ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Denver ✓",
+    "Austin ✓",
+    "Nashville ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "San Diego ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Denver ✓",
+    "Austin ✓",
+    "Nashville ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Big Time Rush",
+   "tour": "In Real Life Worldwide Tour",
+   "qloo": {
+    "id": "96CDB3CA-3520-47FE-B401-EB27B6FC1077",
+    "name": "Big Time Rush",
+    "popularity": 0.983
+   },
+   "played": 36,
+   "notGeocoded": [
+    "Gilford, New Hampshire",
+    "Hershey, Pennsylvania",
+    "Uncasville"
+   ],
+   "app": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Nashville ✓",
+    "Columbus",
+    "Los Angeles ✓",
+    "Boston ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia ✓",
+    "Nashville ✓",
+    "Columbus",
+    "Los Angeles ✓",
+    "Boston ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Jonas Brothers",
+   "tour": "Jonas20: Greetings from Your Hometown Tour",
+   "qloo": {
+    "id": "FF0F07D1-47B1-403A-975C-04BF98EAD8F9",
+    "name": "Jonas Brothers",
+    "popularity": 0.997
+   },
+   "played": 67,
+   "notGeocoded": [
+    "Bethel, New York",
+    "Hershey, Pennsylvania",
+    "Thackerville, Oklahoma",
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Phoenix ✓",
+    "Austin ✓",
+    "Nashville ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Boston ✓",
+    "Phoenix ✓",
+    "Austin ✓",
+    "Nashville ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Sombr",
+   "skipped": "needs_input: Qloo has no exact match for \"Sombr\"."
+  },
+  {
+   "artist": "Ledisi",
+   "tour": "Ledisi for Dinah Tour",
+   "qloo": {
+    "id": "F6368EC6-031E-4AF6-BDB4-152C0F7ACACA",
+    "name": "Ledisi",
+    "popularity": 0.976
+   },
+   "played": 9,
+   "notGeocoded": [
+    "Downtown Seattle"
+   ],
+   "app": [
+    "Houston",
+    "Chicago",
+    "New York City",
+    "Philadelphia",
+    "Washington ✓",
+    "Charlotte",
+    "Dallas",
+    "Los Angeles ✓"
+   ],
+   "blend": [
+    "Houston",
+    "Chicago",
+    "New York City",
+    "Philadelphia",
+    "Washington ✓",
+    "Charlotte",
+    "Dallas",
+    "Los Angeles ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Katy Perry",
+   "tour": "The Lifetimes Tour",
+   "qloo": {
+    "id": "BE94A541-4FEC-49CE-8865-C54834FD8484",
+    "name": "Katy Perry",
+    "popularity": 1
+   },
+   "played": 25,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "San Antonio",
+    "San Francisco ✓",
+    "El Paso"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "San Antonio",
+    "San Francisco ✓",
+    "El Paso"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Doechii",
+   "tour": "Live from the Swamp Tour",
+   "qloo": {
+    "id": "D9CB18A2-B843-4177-A918-B51D7EF7B4D6",
+    "name": "Doechii",
+    "popularity": 0.987
+   },
+   "played": 15,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Houston ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Philadelphia",
+    "Washington ✓",
+    "Dallas ✓",
+    "Jacksonville"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Houston ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Philadelphia",
+    "Washington ✓",
+    "Dallas ✓",
+    "Jacksonville"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "My Chemical Romance",
+   "tour": "Long Live The Black Parade",
+   "qloo": {
+    "id": "97C28558-47C8-4D19-88EC-CD5F8EA82B3B",
+    "name": "My Chemical Romance",
+    "popularity": 1
+   },
+   "played": 23,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Columbus ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "Columbus ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "MGK",
+   "tour": "Lost Americana Tour",
+   "qloo": {
+    "id": "DD92DFB6-C8D4-4E6D-B111-9260682B27B1",
+    "name": "MGK",
+    "popularity": 0.973
+   },
+   "played": 40,
+   "notGeocoded": [
+    "Holmdel Township, New Jersey"
+   ],
+   "app": [
+    "San Diego ✓",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "Albuquerque ✓"
+   ],
+   "blend": [
+    "San Diego ✓",
+    "Columbus",
+    "Austin ✓",
+    "Nashville ✓",
+    "Fort Worth ✓",
+    "San Jose",
+    "Philadelphia ✓",
+    "Albuquerque ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Alessia Cara",
+   "tour": "Love & Hyperbole Tour",
+   "qloo": {
+    "id": "ED85CDB7-36CA-4A51-9443-CF7818CD69BB",
+    "name": "Alessia Cara",
+    "popularity": 0.993
+   },
+   "played": 9,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Boston ✓",
+    "Phoenix"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Boston ✓",
+    "Phoenix"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Ledisi",
+   "tour": "Love You Too Tour",
+   "qloo": {
+    "id": "F6368EC6-031E-4AF6-BDB4-152C0F7ACACA",
+    "name": "Ledisi",
+    "popularity": 0.976
+   },
+   "played": 21,
+   "notGeocoded": [
+    "National Harbor, Maryland"
+   ],
+   "app": [
+    "Houston",
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia",
+    "Washington ✓",
+    "Charlotte ✓",
+    "Dallas",
+    "Los Angeles"
+   ],
+   "blend": [
+    "Houston",
+    "Chicago ✓",
+    "New York City ✓",
+    "Philadelphia",
+    "Washington ✓",
+    "Charlotte ✓",
+    "Dallas",
+    "Los Angeles"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "YoungBoy Never Broke Again",
+   "tour": "Make America Slime Again Tour",
+   "qloo": {
+    "id": "AFE86C85-845A-4303-9197-E28740EC3631",
+    "name": "YoungBoy Never Broke Again",
+    "popularity": 0.974
+   },
+   "played": 36,
+   "notGeocoded": [],
+   "app": [
+    "Houston ✓",
+    "Jacksonville ✓",
+    "Dallas ✓",
+    "Chicago",
+    "Charlotte ✓",
+    "Memphis",
+    "Philadelphia ✓",
+    "Los Angeles ✓"
+   ],
+   "blend": [
+    "Houston ✓",
+    "Jacksonville ✓",
+    "Dallas ✓",
+    "Chicago",
+    "Charlotte ✓",
+    "Memphis",
+    "Philadelphia ✓",
+    "Los Angeles ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Erykah Badu",
+   "tour": "Mama's Gun '25: The Return of Automatic Slim Tour",
+   "qloo": {
+    "id": "D912BC1A-1A32-4D08-8442-BF2422824E80",
+    "name": "Erykah Badu",
+    "popularity": 0.998
+   },
+   "played": 12,
+   "notGeocoded": [],
+   "app": [
+    "Dallas ✓",
+    "Chicago ✓",
+    "Philadelphia",
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Washington",
+    "San Francisco",
+    "Houston ✓"
+   ],
+   "blend": [
+    "Dallas ✓",
+    "Chicago ✓",
+    "Philadelphia",
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Washington",
+    "San Francisco",
+    "Houston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Laufey",
+   "tour": "A Matter of Time Tour",
+   "qloo": {
+    "id": "6C2BE7A7-4154-4F0B-BE10-E751AC9061CF",
+    "name": "Laufey",
+    "popularity": 0.963
+   },
+   "played": 20,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "Seattle ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Lady Gaga",
+   "skipped": "no heatmap cells"
+  },
+  {
+   "artist": "Lady Gaga",
+   "skipped": "no heatmap cells"
+  },
+  {
+   "artist": "Japanese Breakfast",
+   "tour": "The Melancholy Tour",
+   "qloo": {
+    "id": "AA21934D-3A6E-4973-983F-28604C44E3AC",
+    "name": "Japanese Breakfast",
+    "popularity": 0.991
+   },
+   "played": 27,
+   "notGeocoded": [
+    "Pioneertown, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Los Angeles",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Seattle ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "Los Angeles",
+    "San Francisco ✓",
+    "Austin ✓",
+    "Seattle ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Zara Larsson",
+   "tour": "Midnight Sun Tour",
+   "qloo": {
+    "id": "32C7B5A3-B3C1-4CF3-876D-693862E645B5",
+    "name": "Zara Larsson",
+    "popularity": 0.995
+   },
+   "played": 31,
+   "notGeocoded": [
+    "Lake Buena Vista"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Austin ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "San Diego",
+    "San Francisco ✓",
+    "Philadelphia ✓",
+    "Austin ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Tate McRae",
+   "tour": "Miss Possessive Tour",
+   "qloo": {
+    "id": "2D96A87B-3AE9-4950-A892-AE1B9642BB4A",
+    "name": "Tate McRae",
+    "popularity": 0.99
+   },
+   "played": 31,
+   "notGeocoded": [
+    "Thousand Palms, California"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Los Angeles ✓",
+    "San Diego",
+    "Dallas ✓",
+    "Philadelphia ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Blink-182",
+   "tour": "Missionary Impossible (Blink-182)",
+   "qloo": {
+    "id": "D1AA6C1F-F7E4-4A9F-96A3-6A088BA2587A",
+    "name": "blink-182",
+    "popularity": 1
+   },
+   "played": 19,
+   "notGeocoded": [
+    "Bethel, New York",
+    "Gilford, New Hampshire",
+    "Thousand Palms, California"
+   ],
+   "app": [
+    "Los Angeles",
+    "San Diego",
+    "New York City ✓",
+    "Phoenix",
+    "Chicago ✓",
+    "Denver",
+    "Boston",
+    "Albuquerque"
+   ],
+   "blend": [
+    "Los Angeles",
+    "San Diego",
+    "New York City ✓",
+    "Phoenix",
+    "Chicago ✓",
+    "Denver",
+    "Boston",
+    "Albuquerque"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Shakira",
+   "tour": "Las Mujeres Ya No Lloran World Tour",
+   "qloo": {
+    "id": "58F3AF6B-EC34-4BFC-B345-F4210EDE4C43",
+    "name": "Shakira",
+    "popularity": 0.999
+   },
+   "played": 27,
+   "notGeocoded": [
+    "Thousand Palms"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "San Antonio ✓",
+    "Chicago ✓",
+    "El Paso",
+    "San Francisco ✓",
+    "Austin"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "San Antonio ✓",
+    "Chicago ✓",
+    "El Paso",
+    "San Francisco ✓",
+    "Austin"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Turnstile",
+   "tour": "Never Enough Tour",
+   "qloo": {
+    "id": "EE3F789A-3717-4B75-94F1-8DC5F220D4A2",
+    "name": "Turnstile",
+    "popularity": 0.988
+   },
+   "played": 42,
+   "notGeocoded": [
+    "Mayer, Arizona",
+    "Sauget, Illinois"
+   ],
+   "app": [
+    "Philadelphia ✓",
+    "Los Angeles ✓",
+    "New York City",
+    "San Diego ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Portland ✓",
+    "Boston ✓"
+   ],
+   "blend": [
+    "Philadelphia ✓",
+    "Los Angeles ✓",
+    "New York City",
+    "San Diego ✓",
+    "Chicago ✓",
+    "San Francisco ✓",
+    "Portland ✓",
+    "Boston ✓"
+   ],
+   "population": [
+    "New York City",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "the Driver Era",
+   "tour": "Obsession Tour",
+   "qloo": {
+    "id": "5C6ED7DF-08C5-455D-B2ED-538B115F09D0",
+    "name": "The Driver Era",
+    "popularity": 0.928
+   },
+   "played": 36,
+   "notGeocoded": [
+    "Moon Township",
+    "Uncasville"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "San Antonio",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Philadelphia ✓",
+    "San Diego ✓",
+    "Phoenix ✓",
+    "San Antonio",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Onew",
+   "skipped": "needs_input: Qloo has no exact match for \"Onew\"."
+  },
+  {
+   "artist": "Nine Inch Nails",
+   "tour": "Peel It Back Tour",
+   "qloo": {
+    "id": "2E28F9EF-0008-4731-94C3-C195449BA5C2",
+    "name": "Nine Inch Nails",
+    "popularity": 1
+   },
+   "played": 40,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "New York City ✓",
+    "San Diego ✓",
+    "Seattle ✓",
+    "Austin ✓",
+    "San Francisco ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Marina",
+   "tour": "The Princess of Power Tour",
+   "qloo": {
+    "id": "CF83A628-F85C-4FFE-8D80-E8AFE119CB85",
+    "name": "Marina",
+    "popularity": 0.993
+   },
+   "played": 22,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Las Vegas"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Diego ✓",
+    "Philadelphia ✓",
+    "San Francisco ✓",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Iron Maiden",
+   "tour": "Run for Your Lives World Tour",
+   "qloo": {
+    "id": "BD2CDC36-5306-4213-A817-E7677E029CA6",
+    "name": "Iron Maiden",
+    "popularity": 1
+   },
+   "played": 23,
+   "notGeocoded": [
+    "Hershey, Pennsylvania",
+    "Ocean City, Maryland"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Las Vegas",
+    "Philadelphia"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "Chicago ✓",
+    "Phoenix ✓",
+    "Las Vegas",
+    "Philadelphia"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Disturbed",
+   "tour": "The Sickness 25th Anniversary Tour",
+   "qloo": {
+    "id": "08A1DD23-BD01-4C30-90EF-C46FCBE443B0",
+    "name": "Disturbed",
+    "popularity": 0.999
+   },
+   "played": 32,
+   "notGeocoded": [
+    "Montreal",
+    "Toronto",
+    "Total"
+   ],
+   "app": [
+    "San Antonio ✓",
+    "Phoenix ✓",
+    "Columbus",
+    "El Paso",
+    "Chicago ✓",
+    "Las Vegas ✓",
+    "Albuquerque",
+    "New York City ✓"
+   ],
+   "blend": [
+    "San Antonio ✓",
+    "Phoenix ✓",
+    "Columbus",
+    "El Paso",
+    "Chicago ✓",
+    "Las Vegas ✓",
+    "Albuquerque",
+    "New York City ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Kali Uchis",
+   "tour": "The Sincerely, Tour",
+   "qloo": {
+    "id": "3FE8EB01-2C37-4E00-B0C1-E35927ADB5E8",
+    "name": "Kali Uchis",
+    "popularity": 0.996
+   },
+   "played": 24,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "San Francisco ✓",
+    "San Antonio",
+    "Austin ✓",
+    "Chicago ✓",
+    "Phoenix ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "San Diego ✓",
+    "New York City ✓",
+    "San Francisco ✓",
+    "San Antonio",
+    "Austin ✓",
+    "Chicago ✓",
+    "Phoenix ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Ghost",
+   "tour": "Skeletour",
+   "qloo": {
+    "id": "A27C85DE-A8AF-4037-BAC3-709C16A4C7CF",
+    "name": "Ghost",
+    "popularity": 0.995
+   },
+   "played": 43,
+   "notGeocoded": [
+    "Uncasville, Connecticut"
+   ],
+   "app": [
+    "Los Angeles ✓",
+    "Phoenix ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Diego ✓",
+    "New York City ✓",
+    "Detroit ✓",
+    "Dallas ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "Phoenix ✓",
+    "Houston ✓",
+    "Chicago",
+    "San Diego ✓",
+    "New York City ✓",
+    "Detroit ✓",
+    "Dallas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Kylie Minogue",
+   "tour": "Tension Tour",
+   "qloo": {
+    "id": "742BAD50-D6B3-43C6-96AD-701AE2FFC420",
+    "name": "Kylie Minogue",
+    "popularity": 0.999
+   },
+   "played": 12,
+   "notGeocoded": [],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "San Diego",
+    "San Francisco ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "Las Vegas"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "San Diego",
+    "San Francisco ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "Las Vegas"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Lil Wayne",
+   "skipped": "needs_input: Qloo has no exact match for \"Lil Wayne\"."
+  },
+  {
+   "artist": "Twice",
+   "tour": "This Is For World Tour",
+   "qloo": {
+    "id": "E404DC51-323B-4DB4-ABD3-0A9F02C0429E",
+    "name": "TWICE",
+    "popularity": 0.994
+   },
+   "played": 17,
+   "notGeocoded": [],
+   "app": [
+    "Houston",
+    "New York City ✓",
+    "Dallas ✓",
+    "San Diego",
+    "San Antonio",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "El Paso"
+   ],
+   "blend": [
+    "Houston",
+    "New York City ✓",
+    "Dallas ✓",
+    "San Diego",
+    "San Antonio",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "El Paso"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Doja Cat",
+   "tour": "Tour Ma Vie World Tour",
+   "qloo": {
+    "id": "AED4373C-DFD5-425D-9BD7-FFD1EEE9805B",
+    "name": "Doja Cat",
+    "popularity": 0.998
+   },
+   "played": 28,
+   "notGeocoded": [],
+   "app": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Los Angeles ✓",
+    "New York City ✓",
+    "Chicago ✓",
+    "San Antonio ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Seattle ✓",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio ✓",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Lorde",
+   "tour": "Ultrasound World Tour",
+   "qloo": {
+    "id": "A37B17AE-15C7-48A3-AADD-6CE50BE3FF74",
+    "name": "Lorde",
+    "popularity": 0.999
+   },
+   "played": 23,
+   "notGeocoded": [
+    "Yavapai County"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Seattle ✓",
+    "San Francisco ✓",
+    "San Diego",
+    "Austin ✓",
+    "Portland ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Seattle ✓",
+    "San Francisco ✓",
+    "San Diego",
+    "Austin ✓",
+    "Portland ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston",
+    "Phoenix",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Lainey Wilson",
+   "tour": "Whirlwind World Tour",
+   "qloo": {
+    "id": "1FCA1F9B-6CDE-4400-A840-7A5E766D7E2C",
+    "name": "Lainey Wilson",
+    "popularity": 0.853
+   },
+   "played": 30,
+   "notGeocoded": [
+    "Cadott, Wisconsin",
+    "Panama City Beach, Florida"
+   ],
+   "app": [
+    "Fort Worth ✓",
+    "Nashville ✓",
+    "Phoenix ✓",
+    "Indianapolis ✓",
+    "Oklahoma City",
+    "Louisville",
+    "Columbus",
+    "Austin ✓"
+   ],
+   "blend": [
+    "Fort Worth ✓",
+    "Nashville ✓",
+    "Phoenix ✓",
+    "Indianapolis ✓",
+    "Oklahoma City",
+    "Louisville",
+    "Columbus",
+    "Austin ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia",
+    "San Antonio",
+    "San Diego"
+   ]
+  },
+  {
+   "artist": "Ethel Cain",
+   "tour": "The Willoughby Tucker Forever Tour",
+   "qloo": {
+    "id": "DD692BAE-4DA3-4E42-8331-EBB59A5634E5",
+    "name": "Ethel Cain",
+    "popularity": 0.98
+   },
+   "played": 38,
+   "notGeocoded": [
+    "St. Augustine, Florida"
+   ],
+   "app": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Seattle ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Chicago ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "Boston ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Seattle ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  },
+  {
+   "artist": "Wu-Tang Clan",
+   "tour": "Wu-Tang Forever: The Final Chamber",
+   "qloo": {
+    "id": "6EB22B1C-3F33-4EEC-AF26-FDCEE31EF176",
+    "name": "Wu-Tang Clan",
+    "popularity": 0.999
+   },
+   "played": 48,
+   "notGeocoded": [
+    "Thackerville, Oklahoma"
+   ],
+   "app": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Las Vegas ✓"
+   ],
+   "blend": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Philadelphia ✓",
+    "Chicago ✓",
+    "San Diego ✓",
+    "San Francisco ✓",
+    "Washington ✓",
+    "Las Vegas ✓"
+   ],
+   "population": [
+    "New York City ✓",
+    "Los Angeles ✓",
+    "Chicago ✓",
+    "Houston ✓",
+    "Phoenix ✓",
+    "Philadelphia ✓",
+    "San Antonio",
+    "San Diego ✓"
+   ]
+  }
+ ]
+}

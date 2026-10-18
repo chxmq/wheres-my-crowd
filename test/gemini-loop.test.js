@@ -17,7 +17,7 @@ globalThis.fetch = async (url, opts) => {
   if (scenario === "quota") return { ok: false, status: 429, json: async () => ({ error: { status: "RESOURCE_EXHAUSTED", message: "quota" } }) };
   const prompt = body.contents[0].parts[0].text;
   const actId = prompt.match(/Qloo ID ([0-9A-F-]{36})/)[1];
-  const firstCity = prompt.match(/\n1\. (.+?) \(affinity/)[1];
+  const firstCity = prompt.match(/\n1\. (.+?) \(fit/)[1];
   const responses = body.contents.flatMap((c) => c.parts || []).filter((p) => p.functionResponse);
   let part;
   if (!responses.length) part = { functionCall: { name: "qloo_recommend", args: { target_type: "artist", signals: [actId], limit: 3 } } };
