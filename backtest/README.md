@@ -27,13 +27,13 @@ The app used to rank cities by the single strongest Qloo heatmap cell near each 
 - **Ground truth:** every page in Wikipedia's "2022/2023/2024/2025 concert tours" categories (563 pages), read with `fetch_tours.py` (no key; one page every 3 s, cached). From each tour-dates table it keeps the US rows (city and country columns, rowspans expanded); tours with fewer than 8 US cities are dropped: **307 tours**.
 - **Qloo:** each artist is resolved by exact name through the same harness path the app uses; ambiguous or missing names are skipped, never guessed. Then one heatmap call for the United States. Of 307 tours, 16 were skipped for names Qloo couldn't match exactly, 6 for an empty heatmap and 3 for too few US cities we could place on the map: 282 scored. Raw Qloo responses are not committed.
 - **Scoring:** a city counts as played if any show was within 60 km. Every method gets the same candidates (the app's US tour cities: 300k+, metro-folded) and the same one-stop-per-market rule.
-- **Split:** tours crawled first (104 usable) are the development set; the rest (178 usable) were fetched after the change was made.
+- **Split:** tours crawled first (104 usable) are the development set; the rest (178 usable) are held out. The 60/40 weight was tuned on the development set only. To be exact about what we looked at: we compared two candidates on the held-out set, ranking by Qloo popularity alone (0.756 at 8) and this fit (0.779), before choosing fit, so the held-out number carries one choice's worth of optimism.
 
 ## Limits
 
 - US only (Wikipedia's tour tables are densest there); the same ranking is used for India, the UK, Canada and Australia without a separate test.
 - Wikipedia lists mostly bigger acts than the independent artists the app is for. Bigger acts play the biggest cities, which favours the population list, so the gap for smaller acts may well be larger, but this test doesn't show it.
-- Qloo's data may already reflect where artists toured, which would flatter any Qloo-based ranking. The previous ranking used the same data and did not beat population, so data alone doesn't explain the result.
+- Qloo's data may already reflect where artists toured, which would flatter any Qloo-based ranking. The previous ranking used the same data and did no better than population at 5 or 8 cities, so the data alone doesn't explain the result.
 
 ## Run it
 
