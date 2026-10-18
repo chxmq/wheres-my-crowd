@@ -34,6 +34,7 @@ test("rooms come from the Qloo category lookup, minus places that are never a ro
   assert.deepEqual(roomsFrom({ status: "empty", results: [] }), []);
   const sf = { n: 3, status: "ok", results: [{ name: "Atlas Cafe" }, { name: "Shelton Theater" }, { name: "Punch Line San Francisco" }, { name: "Cobb's Comedy Club" }] };
   assert.deepEqual(roomsFrom(sf, 3, "comedian").map((r) => r.name), ["Punch Line San Francisco", "Cobb's Comedy Club", "Atlas Cafe"]);
+  assert.deepEqual(roomsFrom({ n: 4, status: "ok", results: [{ name: "Pruneyard Cinemas" }, { name: "San Jose Improv" }] }, 3, "comedian").map((r) => r.name), ["San Jose Improv"], "a cinema is not a room to pitch");
   assert.deepEqual(roomsCall({ id: "A" }, "comedian", "Seattle").include_tags, ROOM_TAGS.comedian);
 });
 
